@@ -33,9 +33,8 @@ public final class Solution {
 
       double delta = Math.pow((Math.pow(y, 2) - mult * x * z), powr);
 
-        System.out.println("" 
-          + (-1 * y + delta)/(2*x) + " " + (-1 * y - delta)/(2*x));
-      
+        System.out.println(""
+          + (-1 * y + delta) / (2 * x) + " " + (-1 * y - delta) / (2 * x));
 
   }
   /*
@@ -43,7 +42,7 @@ public final class Solution {
   */
 
   /**
-   * { main function }
+   * { main function }.
    *
    * @param      args  The arguments
    */
