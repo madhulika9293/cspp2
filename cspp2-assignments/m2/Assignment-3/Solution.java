@@ -61,3 +61,4 @@ public final class Solution {
   Need to write the power function and print the output.
   */
 }
+
