@@ -34,7 +34,8 @@ public final class Solution {
       if (delta < 0) {
         System.out.println("Roots don't exist");
       } else {
-        System.out.println("" + (-y + delta)/(2*x) + " " + (-y - delta)/(2*x));
+        System.out.println("" + 
+          (-1 * y + delta)/(2*x) + " " + (-1 * y - delta)/(2*x));
       }
 
   }
