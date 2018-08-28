@@ -27,9 +27,11 @@ public final class Solution {
    */
 
   public static void rootsOfQuadraticEquation(
-    int x, int y, int z) {
+    final int x, final int y, final int z) {
+      final int mult = 4;
+      final double powr = 0.5;
 
-      double delta = Math.pow((Math.pow(y, 2) - 4 * x * z),0.5);
+      double delta = Math.pow((Math.pow(y, 2) - mult * x * z),powr);
 
         System.out.println("" + 
           (-1 * y + delta)/(2*x) + " " + (-1 * y - delta)/(2*x));
