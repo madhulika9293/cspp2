@@ -5,6 +5,7 @@
 */
 
 import java.util.Scanner;
+import java.math.*;
 
 /**
   * The only class.
@@ -29,7 +30,7 @@ public final class Solution {
    * @return     { calculates exponent }
    */
 
-  public static int power(final int x, final int y) {
+  public static long power(final int x, final int y) {
     if (y == 1) {
       return x;
     } else if (y == 0) {
@@ -54,7 +55,7 @@ public final class Solution {
     Scanner s = new Scanner(System.in);
         int base = s.nextInt();
         int exponent = s.nextInt();
-        int result = power(base, exponent);
+        long result = power(base, exponent);
         System.out.println(result);
   }
   /*
