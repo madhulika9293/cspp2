@@ -1,7 +1,7 @@
 /**
   * Date: 28-08-2018
   * Name: Madhulika
-  * Program to calculate area of circle   
+  * Program to calculate area of circle
  */
 
 import java.util.Scanner;
@@ -10,7 +10,7 @@ import java.util.Scanner;
   * The only class.
 */
 
-public class AreaOfCircle {
+public final class AreaOfCircle {
   /**
     * default constructor.
   */
@@ -26,7 +26,8 @@ public class AreaOfCircle {
    */
 
   public static double pi() {
-    return 3.14;
+    final double pi = 3.14;
+    return pi;
   }
 
   /**
@@ -37,7 +38,7 @@ public class AreaOfCircle {
    * @return     { area }
    */
 
-  public static double area(int rad) {
+  public static double area(final int rad) {
     return 2 * pi() * rad;
   }
 
@@ -47,17 +48,17 @@ public class AreaOfCircle {
    * @param      args  The arguments
    */
 
-  public static void main(String[] args) {
-  
+  public static void main(final String[] args) {
+
     int radius;
-    double cir_area;
+    double cirArea;
 
     Scanner n = new Scanner(System.in);
     System.out.println("Enter the radius of a circle");
     radius = n.nextInt();
 
-    cir_area = area(radius); 
-    System.out.println("The area of the circle is: " + cir_area);
+    cirArea = area(radius);
+    System.out.println("The area of the circle is: " + cirArea);
   }
-  
+
 }
