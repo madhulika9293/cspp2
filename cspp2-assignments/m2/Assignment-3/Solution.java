@@ -5,7 +5,6 @@
 */
 
 import java.util.Scanner;
-import java.math.*;
 
 /**
   * The only class.
