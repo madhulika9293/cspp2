@@ -19,15 +19,15 @@ public final class Solution {
     //unused
   }
   /**
-   * { calculates roots for quadratic equation }
+   * { calculates roots for quadratic equation }.
    *
    * @param      x     { parameter_description }
    * @param      y     { parameter_description }
    * @param      z     { parameter_description }
    */
 
-  public static void rootsOfQuadraticEquation
-    (int x, int y, int z) {
+  public static void rootsOfQuadraticEquation(
+    int x, int y, int z) {
 
       double delta = Math.pow((Math.pow(y, 2) - 4 * x * z),0.5);
 
