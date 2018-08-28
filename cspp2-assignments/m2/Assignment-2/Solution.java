@@ -31,10 +31,10 @@ public final class Solution {
       final int mult = 4;
       final double powr = 0.5;
 
-      double delta = Math.pow((Math.pow(y, 2) - mult * x * z),powr);
+      double delta = Math.pow((Math.pow(y, 2) - mult * x * z), powr);
 
-        System.out.println("" + 
-          (-1 * y + delta)/(2*x) + " " + (-1 * y - delta)/(2*x));
+        System.out.println("" 
+          + (-1 * y + delta)/(2*x) + " " + (-1 * y - delta)/(2*x));
       
 
   }
