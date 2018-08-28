@@ -11,7 +11,7 @@ import java.util.Scanner;
 */
 
 
-public class Solution {
+public final class Solution {
   /**
     * default constructor.
   */
@@ -19,7 +19,7 @@ public class Solution {
   private Solution() {
     //unused
   }
-  
+
   /**
    * { calculates exponent }.
    *
@@ -45,16 +45,16 @@ public class Solution {
   */
 
   /**
-   * { main function }
+   * { main function }.
    *
    * @param      args  The arguments
    */
 
   public static void main(final String[] args) {
-    Scanner s=new Scanner(System.in);      
+    Scanner s = new Scanner(System.in);
         int base = s.nextInt();
         int exponent = s.nextInt();
-        int result=power(base,exponent);
+        int result = power(base, exponent);
         System.out.println(result);
   }
   /*
