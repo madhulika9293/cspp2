@@ -26,7 +26,21 @@ public final class BiggerEqualSmaller {
    */
 
   public static void main(final String[] args) {
-    
+
+    System.out.println("Enter two variables: ");
+
+    Scanner scan = new Scanner(System.in);
+
+    int varA = scan.nextInt();
+    int varB = scan.nextInt();
+
+    if (varA > varB) {
+      System.out.println("Bigger");
+    }    else if (varA == varB) {
+      System.out.println("Equal");
+    }    else if (varA < varB) {
+      System.out.println("Smaller");
+    }
   }
 
 }
