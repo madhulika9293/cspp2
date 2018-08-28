@@ -30,7 +30,7 @@ public final class Solution {
    * @return     The temperature from farenheit to degrees.
    */
 
-  public static void calculateFromDegreesToFarenheit(double temp) {
+  public static void calculateFromFarenheitToDegrees(double temp) {
     final double subNum = 32;
     final double divNum = 1.8;
 
@@ -48,10 +48,10 @@ public final class Solution {
   public static void main(String[] args) {
     Scanner scan = new Scanner(System.in);
     double degreesCelsius = scan.nextDouble();
-    calculateFromDegreesToFarenheit(degreesCelsius);
+    calculateFromFarenheitToDegrees(degreesCelsius);
   }
   /*
-  Need to fill the calculateFromDegreesToFarenheit function and print the output
+  Need to fill the calculateFromFarenheitToDegrees function and print the output
   of fahrenheit.
   */
 }
