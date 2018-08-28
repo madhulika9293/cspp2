@@ -1,24 +1,45 @@
+/**
+  * Date: 27-08-2018.
+  * Name: Madhulika
+  * Swapping two numbers
+*/
+
 import java.util.Scanner;
 
-public class swap {
-	public static void main(String[] args) {
-		int num1, num2, temp;
+/**
+  * The only classs.
+*/
 
-		Scanner n1 = new Scanner(System.in);
-		System.out.println("Enter your first number");
-		num1 = n1.nextInt();
+public final class swap {
+  /**
+    * default constructor.
+  */
 
-		Scanner n2 = new Scanner(System.in);
-		System.out.println("Enter your second number");
-		num2 = n2.nextInt();
+  private swap() {
+    //unused
+  }
 
-		temp = num1;
-		num1 = num2;
-		num2 = temp;
+    /**
+      * main function.
+      * @param args is for command line arguments.
+    */
 
-		System.out.println("The swapped numbers are " + num1 + ", " + num2);
+  public static void main(final String[] args) {
 
+    int num1, num2, temp;
 
-		
-	}
+    Scanner n1 = new Scanner(System.in);
+    System.out.println("Enter your first number");
+    num1 = n1.nextInt();
+
+    Scanner n2 = new Scanner(System.in);
+    System.out.println("Enter your second number");
+    num2 = n2.nextInt();
+
+    temp = num1;
+    num1 = num2;
+    num2 = temp;
+
+    System.out.println("The swapped numbers are " + num1 + ", " + num2);
+  }
 }
