@@ -18,8 +18,15 @@ public final class factorial {
   private factorial() {
     //unused
   }
+  /**
+   * { function for calculating factorial }.
+   *
+   * @param      x     { int input }
+   *
+   * @return     { factorial of the given number }
+   */
 
-  public static int fact(int x) {
+  public static int fact(final int x) {
     if (x == 0 || x == 1) {
       return 1;
     } else {
