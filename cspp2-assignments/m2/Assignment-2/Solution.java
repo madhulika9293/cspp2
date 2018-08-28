@@ -29,14 +29,11 @@ public final class Solution {
   public static void rootsOfQuadraticEquation
     (int x, int y, int z) {
 
-      double delta = Math.pow(y, 2) - 4 * x * z;
+      double delta = Math.pow((Math.pow(y, 2) - 4 * x * z),0.5);
 
-      if (delta < 0) {
-        System.out.println("Roots don't exist");
-      } else {
         System.out.println("" + 
           (-1 * y + delta)/(2*x) + " " + (-1 * y - delta)/(2*x));
-      }
+      
 
   }
   /*
