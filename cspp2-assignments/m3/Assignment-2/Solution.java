@@ -30,14 +30,14 @@ public final class Solution {
 
   public static void main(final String[] args) {
 
-    Scanner s = new Scanner(System.in);      
+    Scanner s = new Scanner(System.in);
     int n = s.nextInt();
     int count = 0;
 
-    for (int i = 1;i <= n ; i++) {
+    for (int i = 1; i <= n ;i++) {
       String num = String.valueOf(i);
-      char[] num_arr = num.toCharArray();
-      for (char c: num_arr) {
+      char[] numArr = num.toCharArray();
+      for (char c: numArr) {
         if (c == '7') {
           count = count + 1;
         }
