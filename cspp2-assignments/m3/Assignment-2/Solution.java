@@ -34,7 +34,7 @@ public final class Solution {
     int n = s.nextInt();
     int count = 0;
 
-    for (int i = 1; i <= n ;i++) {
+    for (int i = 1; i <= n; i++) {
       String num = String.valueOf(i);
       char[] numArr = num.toCharArray();
       for (char c: numArr) {
