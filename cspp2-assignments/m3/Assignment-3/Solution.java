@@ -50,7 +50,7 @@ public final class Solution {
 
   public static void main(final String[] args) {
 
-    Scanner s = new Scanner(System.in); 
+    Scanner s = new Scanner(System.in);
     int n1 = s.nextInt();
     int n2 = s.nextInt();
     int gcd = gcd(n1, n2);
@@ -60,3 +60,4 @@ public final class Solution {
     Need to write the gcd function and print the output.
   */
 }
+
