@@ -18,18 +18,18 @@ public final class Solution {
   /**
    * Constructs the object.
    */
-  
+
   private Solution() {
     //unused
   }
 
   /**
-   * { function_description }
+   * The Greatest Common Divisor of the given 2 numbers.
    *
    * @param      x     First Number
    * @param      y     Second Number
    *
-   * @return     The Greatest Common Divisor of the given 2 numbers
+   * @return     GCD, int
    */
 
   public static int gcd(int x, int y) {
