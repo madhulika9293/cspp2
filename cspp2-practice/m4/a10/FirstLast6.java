@@ -54,4 +54,3 @@ public final class FirstLast6 {
     FirstLast6 obj = new FirstLast6(arr);
   }
 }
-
