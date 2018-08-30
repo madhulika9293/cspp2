@@ -9,38 +9,44 @@ import java.util.Scanner;
  * Class for solution.
  */
 
-public class Solution {
-	
-	/**
-	 * Constructs the object.
-	 */
-	
-	private Solution() {
-		//unused
-	}
-	
-	/*
-	Fill this main function to print maximum of given array
-	*/
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		int n = sc.nextInt();
+public final class Solution {
 
-		int[] arr = new int[n];
+  /**
+   * Constructs the object.
+   */
 
-		for (int i = 0; i < n; i++ ) {
-			arr[i] = sc.nextInt();
-		}
+  private Solution() {
+    //unused
+  }
 
-		int max = arr[0];
+  /*
+  Fill this main function to print maximum of given array
+  */
 
-		for (int i = 1; i < n; i++) {
-			if (arr[i] > max) {
-				max = arr[i];
-			}
-		}
+  /**
+   * main function.
+   * @param      args  The arguments
+   */
 
-		System.out.println(max);
-	}
+  public static void main (final String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int n = sc.nextInt();
+
+    int[] arr = new int[n];
+
+    for (int i = 0; i < n; i++ ) {
+      arr[i] = sc.nextInt();
+    }
+
+    int max = arr[0];
+
+    for (int i = 1; i < n; i++) {
+      if (arr[i] > max) {
+        max = arr[i];
+      }
+    }
+
+    System.out.println(max);
+  }
 }
 
