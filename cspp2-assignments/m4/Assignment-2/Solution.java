@@ -54,7 +54,7 @@ public class Solution {
 				mat2[i][j] = sc.nextInt();
 			}
 		}
-
+		if (n1 == n3 && n2 == n4) {
 		int[][] matAdd = new int[n1][n2];
 
 		for (int i = 0; i < n1; i++) {
@@ -65,6 +65,7 @@ public class Solution {
 				output += " ";
 			}
 			System.out.println(output.substring(0,output.length()-1));
+		}			
 		}
 	}
 }
