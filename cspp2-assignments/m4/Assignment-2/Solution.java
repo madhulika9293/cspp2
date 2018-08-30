@@ -66,6 +66,8 @@ public class Solution {
 			}
 			System.out.println(output.substring(0,output.length()-1));
 		}			
+		} else {
+			System.out.println("not possible");
 		}
 	}
 }
