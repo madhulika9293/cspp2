@@ -5,8 +5,20 @@
 */
 
 import java.util.Scanner;
+/**
+ * Class for solution.
+ */
 
 public class Solution {
+	
+	/**
+	 * Constructs the object.
+	 */
+	
+	private Solution() {
+		//unused
+	}
+	
 	/*
 	Fill this main function to print maximum of given array
 	*/
