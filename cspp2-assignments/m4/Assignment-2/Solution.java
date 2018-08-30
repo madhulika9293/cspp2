@@ -10,12 +10,12 @@ import java.util.Scanner;
 /**
  * Class for solution.
  */
-	
+
 public class Solution {
 
 	/**
-	 * Constructs the object.
-	 */
+	* Constructs the object.
+	*/
 
 	private Solution() {
 		//unused
@@ -23,49 +23,49 @@ public class Solution {
 
 	/* Fill the main function to print
 	 * resultant of addition of matrices*/
-	
+
 	/**
 	 * main function.
 	 *
 	 * @param      args  The arguments
 	 */
-	
+
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-    
-    int n1 = sc.nextInt();
-    int n2 = sc.nextInt();
 
-    int[][] mat1 = new int[n1][n2];
+		int n1 = sc.nextInt();
+		int n2 = sc.nextInt();
 
-    for (int i = 0; i < n1; i++) {
-    	for (int j = 0; j < n2; j++) {
-    		mat1[i][j] = sc.nextInt();
-    	}
-    }
+		int[][] mat1 = new int[n1][n2];
 
-    int n3 = sc.nextInt();
-    int n4 = sc.nextInt();
+		for (int i = 0; i < n1; i++) {
+			for (int j = 0; j < n2; j++) {
+				mat1[i][j] = sc.nextInt();
+			}
+		}
 
-    int[][] mat2 = new int[n3][n4];
+		int n3 = sc.nextInt();
+		int n4 = sc.nextInt();
 
-    for (int i = 0; i < n3; i++) {
-    	for (int j = 0; j < n4; j++) {
-    		mat2[i][j] = sc.nextInt();
-    	}
-    }
+		int[][] mat2 = new int[n3][n4];
 
-    int[][] matAdd = new int[n1][n2];
+		for (int i = 0; i < n3; i++) {
+			for (int j = 0; j < n4; j++) {
+				mat2[i][j] = sc.nextInt();
+			}
+		}
 
-    for (int i = 0; i < n1; i++) {
-    String output = "";
-    	for (int j = 0; j < n2; j++) {
-    		matAdd[i][j] = mat1[i][j] + mat2[i][j];
-    		output += matAdd[i][j];
-    		output += " ";
-    	}
-    System.out.println(output);
-    }
+		int[][] matAdd = new int[n1][n2];
+
+		for (int i = 0; i < n1; i++) {
+			String output = "";
+			for (int j = 0; j < n2; j++) {
+				matAdd[i][j] = mat1[i][j] + mat2[i][j];
+				output += matAdd[i][j];
+				output += " ";
+			}
+			System.out.println(output.substring(0,7));
+		}
 	}
 }
 
