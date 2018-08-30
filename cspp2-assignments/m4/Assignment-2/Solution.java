@@ -64,7 +64,7 @@ public class Solution {
 				output += matAdd[i][j];
 				output += " ";
 			}
-			System.out.println(output.substring(0,7));
+			System.out.println(output.substring(0,output.length()-1));
 		}
 	}
 }
