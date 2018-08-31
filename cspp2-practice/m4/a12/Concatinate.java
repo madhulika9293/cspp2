@@ -21,7 +21,7 @@ public final class Concatinate {
 
   private Concatinate() {
     //unused
-    }
+  }
 
   /**
    * main function.
@@ -32,6 +32,14 @@ public final class Concatinate {
   public static void main(final String[] args) {
 
     Scanner scan = new Scanner(System.in);
-
+    String name = scan.nextLine();
+    System.out.println(helloName(name));
   }
+
+  public static String helloName(String name) {
+    String output = "Hello ";
+    output = output.concat(name).concat("!");
+    return output;
+  }
+
 }
