@@ -12,29 +12,45 @@ import java.util.Scanner;
  */
 
 public class Solution {
-	/*
-	Do not modify the main function
-	*/
+  /*
+  Do not modify the main function
+  */
 
-	/**
-	 * main function.
-	 *
-	 * @param      args  The arguments
-	 */
+  /**
+   * Constructs the object.
+   */
+  
+  private Solution() {
+    //unused constructor
+  }
 
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		String s = sc.nextLine();
-		String reverse = reverseString(s);
-		System.out.println(reverse);
-	}
-	//Write reverseString function
+  /**
+   * main function.
+   *
+   * @param      args  The arguments
+   */
 
-	public static String reverseString(String str) {
-		String strRev = "";
-		for (int i = str.length() - 1; i >= 0; i--) {
-			strRev += str.charAt(i);
-		}
-		return strRev;
-	}
+  public static void main(final String[] args) {
+    Scanner sc = new Scanner(System.in);
+    String s = sc.nextLine();
+    String reverse = reverseString(s);
+    System.out.println(reverse);
+  }
+  //Write reverseString function
+  
+  /**
+   * reverse the given string
+   *
+   * @param      str   The string
+   *
+   * @return     reverse of str, String
+   */
+
+  public static String reverseString(final String str) {
+    String strRev = "";
+    for (int i = str.length() - 1; i >= 0; i--) {
+      strRev += str.charAt(i);
+    }
+    return strRev;
+  }
 }
