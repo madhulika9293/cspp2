@@ -11,7 +11,7 @@ import java.util.Scanner;
  * Class for solution.
  */
 
-public class Solution {
+public final class Solution {
 
   /**
    * Constructs the object.
@@ -25,7 +25,13 @@ public class Solution {
   Do not modify this main function.
   */
 
-  public static void main(String[] args) {
+  /**
+   * Main function.
+   *
+   * @param      args  The arguments
+   */
+
+  public static void main(final String[] args) {
     Scanner sc = new Scanner(System.in);
     int n = sc.nextInt();
     for (int i = 0; i <= n; i++) {
@@ -36,6 +42,14 @@ public class Solution {
       }
     }
   }
+
+  /**
+   * binaryToDecimal function.
+   *
+   * @param      biStr  The bi string
+   *
+   * @return    string
+   */
 
   public static String binaryToDecimal(String biStr) {
     int sum = 0;
