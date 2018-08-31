@@ -11,7 +11,7 @@ import java.util.Scanner;
  * Class for solution.
  */
 
-public class Solution {
+public final class Solution {
   /*
   Do not modify the main function
   */
@@ -19,7 +19,7 @@ public class Solution {
   /**
    * Constructs the object.
    */
-  
+
   private Solution() {
     //unused constructor
   }
@@ -37,9 +37,9 @@ public class Solution {
     System.out.println(reverse);
   }
   //Write reverseString function
-  
+
   /**
-   * reverse the given string
+   * reverse the given string.
    *
    * @param      str   The string
    *
