@@ -51,7 +51,7 @@ public final class Solution {
    * @return    string
    */
 
-  public static String binaryToDecimal(String biStr) {
+  public static String binaryToDecimal(final String biStr) {
     int sum = 0;
     final int strLen = biStr.length() - 1;
     for (int i = 0; i <= strLen; i++) {
