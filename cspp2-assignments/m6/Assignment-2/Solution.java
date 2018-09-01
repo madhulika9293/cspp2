@@ -44,6 +44,7 @@ final class Solution {
         //   a[i][j] = 500;
         // }
         double temp1 = a[i][j]/100;
+        System.out.println(temp1);
         int temp = (int) Math.round(temp1);
         a[i][j] = temp*100;
       }
