@@ -27,7 +27,7 @@ final class Solution {
     // write your code here
     for (int i = 0; i < rows; i++) {
       for (int j = 0; j < columns; j++) {
-        a[i][j] = a[i][j]%100;
+        a[i][j] = a[i][j]/100;
       }
     }
     return a;
