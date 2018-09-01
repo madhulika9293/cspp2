@@ -25,12 +25,13 @@ final class Solution {
   static int[][] roundHundred(final int[][] a, final int rows, final int columns) {
 
     // write your code here
+    double[][] b = new double[rows][columns];
     for (int i = 0; i < rows; i++) {
       for (int j = 0; j < columns; j++) {
-        a[i][j] = a[i][j]/100;
+        b[i][j] = a[i][j]/100;
       }
     }
-    return a;
+    return b;
   }
   /**
    * Main function.
