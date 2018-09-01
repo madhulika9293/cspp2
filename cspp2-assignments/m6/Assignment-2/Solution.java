@@ -43,7 +43,7 @@ final class Solution {
         // } else if (a[i][j] > 450 && a[i][j] <= 550) {
         //   a[i][j] = 500;
         // }
-        double temp1 = a[i][j]/100;
+        double temp1 = a[i][j]/10;
         System.out.println(temp1);
         int temp = (int) Math.round(temp1);
         a[i][j] = temp*100;
