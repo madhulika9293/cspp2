@@ -25,28 +25,32 @@ final class Solution {
   static int[][] roundHundred(final int[][] a, final int r, final int c) {
 
     // write your code here
-    // final int strt = 0; 
+    // final int strt = 0;
     // final int strt1 = 50;
 
     for (int i = 0; i < r; i++) {
       for (int j = 0; j < c; j++) {
-        // if (a[i][j] > strt && a[i][j] <= strt1) {
-        //   a[i][j] = 0;
-        // } else if (a[i][j] > strt + 50 && a[i][j] <= strt + 150) {
-        //   a[i][j] = 100;
-        // } else if (a[i][j] > 150 && a[i][j] <= 250) {
-        //   a[i][j] = 200;
-        // } else if (a[i][j] > 250 && a[i][j] <= 350) {
-        //   a[i][j] = 300;
-        // } else if (a[i][j] > 350 && a[i][j] <= 450) {
-        //   a[i][j] = 400;
-        // } else if (a[i][j] > 450 && a[i][j] <= 550) {
-        //   a[i][j] = 500;
-        // }
-        float temp1 = a[i][j]/100;
-        System.out.println(temp1);
-        int temp = (int) Math.round(temp1);
-        a[i][j] = temp*100;
+        final int strt = 0;
+        final int strt1 = 50;
+        final int strt2 = 150;
+        final int strt3 = 250;
+        final int strt4 = 350;
+        final int strt5 = 450;
+        final int strt6 = 550;
+
+        if (a[i][j] > strt && a[i][j] <= strt1) {
+          a[i][j] = 0;
+        } else if (a[i][j] > strt1 && a[i][j] <= strt2) {
+          a[i][j] = 100;
+        } else if (a[i][j] > strt2 && a[i][j] <= strt3) {
+          a[i][j] = 200;
+        } else if (a[i][j] > strt3 && a[i][j] <= strt4) {
+          a[i][j] = 300;
+        } else if (a[i][j] > strt4 && a[i][j] <= strt5) {
+          a[i][j] = 400;
+        } else if (a[i][j] > strt5 && a[i][j] <= strt6) {
+          a[i][j] = 500;
+        }
       }
     }
     return a;
