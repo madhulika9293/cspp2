@@ -22,16 +22,15 @@ final class Solution {
    *
    * @return     Matrix of the rounded elements
    */
-  static double[][] roundHundred(final int[][] a, final int rows, final int columns) {
+  static int[][] roundHundred(final int[][] a, final int rows, final int columns) {
 
     // write your code here
-    double[][] b = new double[rows][columns];
     for (int i = 0; i < rows; i++) {
       for (int j = 0; j < columns; j++) {
-        b[i][j] = a[i][j] / 100;
+        a[i][j] = a[i][j]/50;
       }
     }
-    return b;
+    return a;
   }
   /**
    * Main function.
@@ -48,7 +47,7 @@ final class Solution {
         a[i][j] = scan.nextInt();
       }
     }
-    double[][] b = roundHundred(a, m, n);
+    int[][] b = roundHundred(a, m, n);
     for (int i = 0; i < m; i++) {
       for (int j = 0; j < n - 1; j++) {
         System.out.print(b[i][j] + " ");
