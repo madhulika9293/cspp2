@@ -25,22 +25,27 @@ final class Solution {
   static int[][] roundHundred(final int[][] a, final int r, final int c) {
 
     // write your code here
-    int strt = 0; 
+    // final int strt = 0; 
+    // final int strt1 = 50;
+
     for (int i = 0; i < r; i++) {
       for (int j = 0; j < c; j++) {
-        if (a[i][j] > strt && a[i][j] <= strt + 50) {
-          a[i][j] = 0;
-        } else if (a[i][j] > strt + 50 && a[i][j] <= strt + 150) {
-          a[i][j] = 100;
-        } else if (a[i][j] > 150 && a[i][j] <= 250) {
-          a[i][j] = 200;
-        } else if (a[i][j] > 250 && a[i][j] <= 350) {
-          a[i][j] = 300;
-        } else if (a[i][j] > 350 && a[i][j] <= 450) {
-          a[i][j] = 400;
-        } else if (a[i][j] > 450 && a[i][j] <= 550) {
-          a[i][j] = 500;
-        }
+        // if (a[i][j] > strt && a[i][j] <= strt1) {
+        //   a[i][j] = 0;
+        // } else if (a[i][j] > strt + 50 && a[i][j] <= strt + 150) {
+        //   a[i][j] = 100;
+        // } else if (a[i][j] > 150 && a[i][j] <= 250) {
+        //   a[i][j] = 200;
+        // } else if (a[i][j] > 250 && a[i][j] <= 350) {
+        //   a[i][j] = 300;
+        // } else if (a[i][j] > 350 && a[i][j] <= 450) {
+        //   a[i][j] = 400;
+        // } else if (a[i][j] > 450 && a[i][j] <= 550) {
+        //   a[i][j] = 500;
+        // }
+        // double temp1 = ;
+        int temp = Math.round(a[i][j]/100);
+        a[i][j] = temp*100;
       }
     }
     return a;
