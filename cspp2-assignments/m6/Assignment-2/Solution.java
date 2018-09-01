@@ -38,18 +38,25 @@ final class Solution {
         final int strt5 = 450;
         final int strt6 = 550;
 
+        final int out1 = 100;
+        final int out2 = 200;
+        final int out3 = 300;
+        final int out4 = 400;
+        final int out5 = 500;
+
+
         if (a[i][j] > strt && a[i][j] <= strt1) {
           a[i][j] = 0;
         } else if (a[i][j] > strt1 && a[i][j] <= strt2) {
-          a[i][j] = 100;
+          a[i][j] = out1;
         } else if (a[i][j] > strt2 && a[i][j] <= strt3) {
-          a[i][j] = 200;
+          a[i][j] = out2;
         } else if (a[i][j] > strt3 && a[i][j] <= strt4) {
-          a[i][j] = 300;
+          a[i][j] = out3;
         } else if (a[i][j] > strt4 && a[i][j] <= strt5) {
-          a[i][j] = 400;
+          a[i][j] = out4;
         } else if (a[i][j] > strt5 && a[i][j] <= strt6) {
-          a[i][j] = 500;
+          a[i][j] = out5;
         }
       }
     }
