@@ -17,16 +17,16 @@ final class Solution {
    * elements of a matrix to the nearest 100.
    *
    * @param      a     Matrix of which the elements to be rounded
-   * @param      rows     Number of rows
-   * @param      columns     Number of columns
+   * @param      r     Number of rows
+   * @param      c     Number of columns
    *
    * @return     Matrix of the rounded elements
    */
-  static int[][] roundHundred(final int[][] a, final int rows, final int columns) {
+  static int[][] roundHundred(final int[][] a, final int r, final int c) {
 
     // write your code here
-    for (int i = 0; i < rows; i++) {
-      for (int j = 0; j < columns; j++) {
+    for (int i = 0; i < r; i++) {
+      for (int j = 0; j < c; j++) {
         if (a[i][j] > 0 && a[i][j] <= 50) {
           a[i][j] = 0;
         } else if (a[i][j] > 50 && a[i][j] <= 150) {
