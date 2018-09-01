@@ -18,7 +18,7 @@ public final class Solution {
      * @param      n     n value
      */
     static void oddComposites(final int n) {
-	// write your code here
+  // write your code here
     }
     /**
     * main method as driver program.
@@ -30,4 +30,3 @@ public final class Solution {
         oddComposites(n);
     }
 }
-
