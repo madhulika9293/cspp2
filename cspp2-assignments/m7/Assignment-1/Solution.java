@@ -41,9 +41,11 @@ class InputValidator {
  */
 
 public class Solution {
-  
+
   /**
-   * main function
+   * main function.
+   * 
+   * @param      args
    */
 
   public static void main(final String args[]) {
