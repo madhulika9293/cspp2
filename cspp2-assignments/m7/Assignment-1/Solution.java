@@ -8,7 +8,7 @@ import java.util.Scanner;
 /**
  * Class for input validator.
  */
-class InputValidator {
+final class InputValidator {
   /*Write the atrributes and methods for InputValidator*/
   /**
    * input string.
