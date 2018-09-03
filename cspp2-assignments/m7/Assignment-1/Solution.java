@@ -5,9 +5,11 @@
 */
 
 import java.util.Scanner;
+
 /**
  * Class for input validator.
  */
+
 class InputValidator {
   /*Write the atrributes and methods for InputValidator*/
   /**
@@ -30,7 +32,7 @@ class InputValidator {
    *
    * @return     boolean for validating the input data.
    */
-  public boolean validateData() {
+  boolean validateData() {
     final int lenCheck = 6;
     return inpData.length() >= lenCheck;
   }
