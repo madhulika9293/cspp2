@@ -21,7 +21,7 @@ class InputValidator {
    * @param      iD    input string
    */
 
-  InputValidator(final String iD) {
+  public InputValidator(final String iD) {
     inpData = iD;
   }
 
@@ -41,7 +41,12 @@ class InputValidator {
  */
 
 public class Solution {
-  public static void main(String args[]) {
+  
+  /**
+   * main function
+   */
+
+  public static void main(final String args[]) {
     Scanner s = new Scanner(System.in);
     String input = s.next();
     InputValidator i = new InputValidator(input);
