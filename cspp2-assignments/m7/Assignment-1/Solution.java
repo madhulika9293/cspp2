@@ -25,6 +25,11 @@ class InputValidator {
     inpData = iD;
   }
 
+  /**
+   * Validates data.
+   *
+   * @return     boolean for validating the input data.
+   */
   public boolean validateData() {
     return inpData.length() >= 6;
   }
