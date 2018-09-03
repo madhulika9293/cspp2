@@ -40,13 +40,13 @@ class InputValidator {
  * Class for solution.
  */
 
-public class Solution {
+public final class Solution {
 
   /**
-   * main function.
-   * 
-   * @param      args
-   */
+  * The main function.
+  *
+  * @param      args  The arguments
+  */
 
   public static void main(final String args[]) {
     Scanner s = new Scanner(System.in);
