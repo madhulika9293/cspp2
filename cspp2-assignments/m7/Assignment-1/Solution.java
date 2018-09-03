@@ -17,6 +17,14 @@ class InputValidator {
 
   /**
    * Constructs the object.
+   */
+  
+  private InputValidator() {
+    //unused
+  }
+
+  /**
+   * Constructs the object.
    *
    * @param      iD    input string
    */
