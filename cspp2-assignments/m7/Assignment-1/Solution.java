@@ -21,7 +21,7 @@ class InputValidator {
    * @param      iD    input string
    */
 
-  public InputValidator(final String iD) {
+  InputValidator(final String iD) {
     inpData = iD;
   }
 
