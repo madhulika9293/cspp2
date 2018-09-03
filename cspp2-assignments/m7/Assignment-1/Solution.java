@@ -46,6 +46,14 @@ class InputValidator {
 public final class Solution {
 
   /**
+   * Constructs the object.
+   */
+  
+  private Solution() {
+    //unused
+  }
+
+  /**
   * The main function.
   *
   * @param      args  The arguments
