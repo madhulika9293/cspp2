@@ -70,7 +70,7 @@ public class List {
   /**
    * max length of list.
    */
-  final int max = 10;
+  private int max = 10;
 
   /*
    * The purpose of the constructor is to initialize the
