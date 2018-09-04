@@ -70,7 +70,6 @@ public class List {
   /**
    * max length of list.
    */
-  private int max;
 
   /*
    * The purpose of the constructor is to initialize the
@@ -145,7 +144,6 @@ public class List {
   public void remove(int index) {
     // write the logic for remove here.
     // Think about what to do to the size variable.
-    int[] temp = new int[max];
     if (index < size) {
       for (int i = index; i < size; i++) {
         list[i] = list[i + 1];
