@@ -129,15 +129,19 @@ public class List {
     // write the logic for remove here.
     // Think about what to do to the size variable.
     int[] temp = new int[500];
-    for (int i = 0; i < 500; i++) {
-      if (i < index - 1) {
-        temp[i] = list[i];
-      } else if (i > index - 1) {
-        temp[i - 1] = list[i];
+    if (index < size) {
+      for (int i = 0; i < 500; i++) {
+        if (i < index - 1) {
+          temp[i] = list[i];
+        } else if (i > index - 1) {
+          temp[i - 1] = list[i];
+        }
       }
+      size -= 1;
+      list = temp.clone();
+    } else {
+      System.out.println("Invalid Position Exception");
     }
-    size -= 1;
-    list = temp.clone();
   }
 
   /*
@@ -190,7 +194,7 @@ public class List {
       } else if (i == size - 1 ) {
         temp1 += list[i];
       }
-      }
+    }
     temp1 += "]";
     return temp1;
   }
@@ -206,8 +210,6 @@ public class List {
     for (int i = 0; i < size; i++) {
       if (list[i] == item) {
         return true;
-      } else {
-        return false;
       }
     }
     return false;
@@ -264,7 +266,9 @@ public class List {
         System.out.println(l.indexOf(Integer.parseInt(tokens[1])));
         break;
       case "get":
-        System.out.println(l.get(Integer.parseInt(tokens[1])));
+        if (Integer.parseInt(tokens[1]) < l.size()) {
+          System.out.println(l.get(Integer.parseInt(tokens[1])));
+        }
         break;
       case "contains":
         System.out.println(l.contains(Integer.parseInt(tokens[1])));
