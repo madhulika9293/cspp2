@@ -75,6 +75,10 @@ public class List {
    * The purpose of the constructor is to initialize the
    * class variables with some default values.
    */
+
+  /**
+   * Constructs the object.
+   */
   public List() {
 
     // what are the two variables to be initialized here?
@@ -241,7 +245,7 @@ public class List {
     return -1;
   }
 
-  public static void main(String[] args) {
+  public static void main(final String[] args) {
     // create an object of the list to invoke methods on it
     List l = new List();
 
