@@ -107,6 +107,11 @@ public class List {
    *
    * The method returns void (nothing)
    */
+  /**
+   * add an element to the list.
+   *
+   * @param      item  The item
+   */
   public void add(final int item) {
     //Inserts the specified element at the end of the list.
     list[size] = item;
@@ -119,6 +124,11 @@ public class List {
    * to the objects outside the list
    *
    * The method returns an int. Empty list should return 0.
+   */
+  /**
+   * returns the size of the list.
+   *
+   * @return     { description_of_the_return_value }
    */
   public int size() {
     // replace the code below to implement the size method
@@ -145,6 +155,11 @@ public class List {
    * array = [1,3,0,0,0,0,0,0,0,0]
    * The method returns void (nothing)
    */
+  /**
+   * removes an element from the list at a given index.
+   *
+   * @param      index  The index
+   */
   public void remove(final int index) {
     // write the logic for remove here.
     // Think about what to do to the size variable.
@@ -169,6 +184,13 @@ public class List {
    * in the list then that would mean the item doesn't exist.
    * How do we check if the position is greater than the
    * number of items in the list? Would size variable be useful?
+   */
+  /**
+   * gets the element at the given index.
+   *
+   * @param      index  The index
+   *
+   * @return     { description_of_the_return_value }
    */
   public int get(final int index) {
     // Replace the code below to write the code for get
@@ -199,6 +221,11 @@ public class List {
    * not all the elements of the array.
    *
    */
+  /**
+   * Returns a string representation of the object.
+   *
+   * @return     String representation of the object.
+   */
   public String toString() {
     // Replace the code below
     String temp1 = "[";
@@ -220,6 +247,13 @@ public class List {
    * So, iterate through the list and return true if
    * the item exists and otherwise false
    */
+  /**
+   * checks if the list has a given element.
+   *
+   * @param      item  The item
+   *
+   * @return     { description_of_the_return_value }
+   */
   public boolean contains(final int item) {
     // Replace the code below
     for (int i = 0; i < size; i++) {
@@ -235,6 +269,13 @@ public class List {
    * of the specified element in this list,
    * or -1 if this list does not contain the element.
    */
+  /**
+   * Searches for the first match.
+   *
+   * @param      item  The item
+   *
+   * @return     { description_of_the_return_value }
+   */
   public int indexOf(final int item) {
     // Replace the code below
     for (int i = 0; i < size; i++) {
@@ -244,7 +285,11 @@ public class List {
     }
     return -1;
   }
-
+  /**
+   * the main function.
+   *
+   * @param      args  The arguments
+   */
   public static void main(final String[] args) {
     // create an object of the list to invoke methods on it
     List l = new List();
