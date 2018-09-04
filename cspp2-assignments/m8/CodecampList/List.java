@@ -1,6 +1,9 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 
+/**
+ * List ADT.
+ */
 public class List {
   //Implement all the methods mentioned to build a ListADT
 
@@ -29,6 +32,10 @@ public class List {
   // declare a private int[]
   // don't create the array yet using new
   // that's the job of the List constructor
+  
+  /**
+   * list class variable.
+   */
   private int[] list;
 
   /*
@@ -54,7 +61,16 @@ public class List {
   // declare a private int size
   // again, don't initialize it here
   // variable initialization should be done in the constructor
+  
+  /**
+   * size class variable.
+   */
   private int size;
+
+  /**
+   * max length of list.
+   */
+  final int max = 10;
 
   /*
    * The purpose of the constructor is to initialize the
@@ -72,7 +88,7 @@ public class List {
     // How many items do we have in the list when you create it?
     // An empty list has how many items?
     // That is the initial value to use for size.
-    list = new int[500];
+    list = new int[max];
     size = 0;
   }
 
@@ -128,21 +144,13 @@ public class List {
   public void remove(int index) {
     // write the logic for remove here.
     // Think about what to do to the size variable.
-    int[] temp = new int[500];
+    int[] temp = new int[max];
     if (index < size) {
       for (int i = index;i<size;i++) {
         list[i] = list[i+1];
       }
       list[size-1] = 0;
       size -= 1;
-      // for (int i = 0; i < 500; i++) {
-      //   if (i < index - 1) {
-      //     temp[i] = list[i];
-      //   } else if (i > index - 1) {
-      //     temp[i - 1] = list[i];
-      //   }
-      // }
-      // list = temp.clone();
     } else {
       System.out.println("Invalid Position Exception");
     }
