@@ -32,7 +32,7 @@ public class List {
   // declare a private int[]
   // don't create the array yet using new
   // that's the job of the List constructor
-  
+
   /**
    * list class variable.
    */
@@ -61,7 +61,7 @@ public class List {
   // declare a private int size
   // again, don't initialize it here
   // variable initialization should be done in the constructor
-  
+
   /**
    * size class variable.
    */
@@ -146,10 +146,10 @@ public class List {
     // Think about what to do to the size variable.
     int[] temp = new int[max];
     if (index < size) {
-      for (int i = index;i<size;i++) {
-        list[i] = list[i+1];
+      for (int i = index; i < size; i++) {
+        list[i] = list[i + 1];
       }
-      list[size-1] = 0;
+      list[size - 1] = 0;
       size -= 1;
     } else {
       System.out.println("Invalid Position Exception");
