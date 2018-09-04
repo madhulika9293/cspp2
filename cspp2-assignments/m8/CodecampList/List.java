@@ -70,7 +70,7 @@ public class List {
   /**
    * max length of list.
    */
-  private int max = 10;
+  private int max;
 
   /*
    * The purpose of the constructor is to initialize the
@@ -88,6 +88,7 @@ public class List {
     // How many items do we have in the list when you create it?
     // An empty list has how many items?
     // That is the initial value to use for size.
+    max = 10;
     list = new int[max];
     size = 0;
   }
