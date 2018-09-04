@@ -88,7 +88,7 @@ public class List {
     // How many items do we have in the list when you create it?
     // An empty list has how many items?
     // That is the initial value to use for size.
-    max = 10;
+    final int max = 10;
     list = new int[max];
     size = 0;
   }
