@@ -130,15 +130,19 @@ public class List {
     // Think about what to do to the size variable.
     int[] temp = new int[500];
     if (index < size) {
-      for (int i = 0; i < 500; i++) {
-        if (i < index - 1) {
-          temp[i] = list[i];
-        } else if (i > index - 1) {
-          temp[i - 1] = list[i];
-        }
+      for (int i = index;i<size;i++) {
+        list[i] = list[i+1];
       }
+      list[size-1] = 0;
       size -= 1;
-      list = temp.clone();
+      // for (int i = 0; i < 500; i++) {
+      //   if (i < index - 1) {
+      //     temp[i] = list[i];
+      //   } else if (i > index - 1) {
+      //     temp[i - 1] = list[i];
+      //   }
+      // }
+      // list = temp.clone();
     } else {
       System.out.println("Invalid Position Exception");
     }
