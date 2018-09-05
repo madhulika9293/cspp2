@@ -44,10 +44,11 @@ public final class Fibonacci {
      *
      * @return     List
      */
-    
-    public static List fib(int n) {
+
+    public static List fib(final int n) {
         // todo - complete this method
-        List l = new List(500);
+        final int sizeList = 500;
+        List l = new List(sizeList);
 
         for (int i = 0; i < n; i++) {
             if (i < 2) {
@@ -60,7 +61,13 @@ public final class Fibonacci {
         return l;
     }
 
-    public static void main(String[] args) {
+    /**
+     * Main function.
+     *
+     * @param      args  The arguments
+     */
+
+    public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
         int n = s.nextInt();
         System.out.println(fib(n));
