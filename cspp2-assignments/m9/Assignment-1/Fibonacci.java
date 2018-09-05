@@ -17,6 +17,10 @@ import java.util.Scanner;
  *
  */
 
+/**
+ * Class for fibonacci.
+ */
+
 public class Fibonacci {
     /*
      * fib is a static method takes a argument n
@@ -25,6 +29,14 @@ public class Fibonacci {
      *
      * Look for the hint.txt if some of the testcases fail.
      */
+    /**
+     * Constructs the object.
+     */
+
+    private Fibonacci() {
+        //unused
+    }
+
     public static List fib(int n) {
         // todo - complete this method
         List l = new List(500);
