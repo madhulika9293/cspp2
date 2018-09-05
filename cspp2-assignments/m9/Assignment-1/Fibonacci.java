@@ -33,7 +33,7 @@ public class Fibonacci {
             if (i < 2) {
                 l.add(i);
             } else {
-                int temp = l.get(i-1) + l.get(i-2);
+                int temp = l.get(i - 1) + l.get(i - 2);
                 l.add(temp);
             }
         }
