@@ -93,7 +93,7 @@ public class List {
    * constructor.
    *
    */
-  public List(int capacity) {
+  public List(final int capacity) {
     size = 0;
     list = new int[capacity];
   }
@@ -109,7 +109,7 @@ public class List {
    *
    * The method returns void (nothing)
    */
-  public void add(int item) {
+  public void add(final int item) {
     //Inserts the specified element at the end of the zelist.
     list[size++] = item;
   }
@@ -179,7 +179,7 @@ public class List {
    * The method returns void (nothing)
    */
 
-  public void remove(int index) {
+  public void remove(final int index) {
     // write the logic for remove here.
     // Think about what to do to the size variable.
     if (index >= 0 && index < size) {
@@ -203,7 +203,7 @@ public class List {
    * How do we check if the position is greater than the
    * number of items in the list? Would size variable be useful?
    */
-  public int get(int index) {
+  public int get(final int index) {
     if (index < 0 || index >= size) {
       return -1;
     } else {
@@ -249,7 +249,7 @@ public class List {
    * So, iterate through the list and return true if
    * the item exists and otherwise false
    */
-  public boolean contains(int item) {
+  public boolean contains(final int item) {
     return indexOf(item) == -1;
   }
 
@@ -258,7 +258,7 @@ public class List {
    * of the specified element in this list,
    * or -1 if this list does not contain the element.
    */
-  public int indexOf(int item) {
+  public int indexOf(final int item) {
     for (int i = 0; i < size; i++) {
       if (item == list[i])
         return i;
@@ -267,7 +267,7 @@ public class List {
   }
   /*Inserts all the elements of specified int
    array to the end of list*/
-  public void addAll(int items[]) {
+  public void addAll(final int items[]) {
     // write the logic
     for (int i = 0; i < items.length; i++) {
       add(items[i]);
@@ -279,7 +279,7 @@ public class List {
   by moving all the elements to the right.
          The method returns void (nothing)
       */
-  public void add(int index, int item) {
+  public void add(final int index, final int item) {
     // write the logic
     size += 1;
     if (index < size) {
@@ -291,7 +291,7 @@ public class List {
   }
 
   /* Returns the count of occurances of a given item in the list*/
-  public int count(int item) {
+  public int count(final int item) {
     // write the logic
     int c = 0;
     for (int i = 0; i < size; i++) {
@@ -303,7 +303,7 @@ public class List {
   }
 
 
-  public static void main(String[] args) {
+  public static void main(final String[] args) {
     // create an object of the list to invoke methods on it
     List l = new List();
 
@@ -323,7 +323,7 @@ public class List {
           if (t.length == 1) {
             l.add(Integer.parseInt(tokens[1]));
           } else {
-            if (t.length > 1){
+            if (t.length > 1) {
               l.add(Integer.parseInt(t[0]), Integer.parseInt(t[1]));
             }
           }
