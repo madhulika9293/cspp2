@@ -285,19 +285,19 @@ public class List {
       */
   public void add(final int index, final int item) {
     // write the logic
-    if (index == 0) {
-      list[index] = item;
+    if (size == 0 && index == 0) {
+      list[0] = item;
       size += 1;
-    } 
-    size += 1;
-    if (index < size && index > 0 ) {
-      for (int i = size - 1; i > index; i--) {
-        list[i] = list[i - 1];
+    } else if (index < size) {
+      size += 1;
+      for (int i = size - 1; i > index; i++) {
+        list[i+1] = list[i];
       }
       list[index] = item;
-    } else if (index < 0) {
+    } else {
       System.out.println("Negative Index Exception");
     }
+
   }
 
   /* Returns the count of occurances of a given item in the list*/
