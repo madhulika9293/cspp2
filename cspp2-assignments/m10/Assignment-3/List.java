@@ -164,14 +164,14 @@ public class List<E> {
    */
   public boolean contains(E item) {
     //Write logic for contains method
-    // boolean checkFlag = false;
-    // for (int i = 0; i < size; i++) {
-    //   if (list[i] == item) {
-    //     checkFlag = true;
-    //   }
-    // }
-    // return checkFlag;
-    return indexOf(item) == -1;
+    boolean checkFlag = false;
+    for (int i = 0; i < size; i++) {
+      if (list[i] == item) {
+        checkFlag = true;
+      }
+    }
+    return checkFlag;
+    // return indexOf(item) == -1;
   }
   /*
    * Returns the index of the first occurrence
@@ -180,12 +180,13 @@ public class List<E> {
    */
   public int indexOf(E item) {
     //Write logic for indexOf method
+    int temp = -1;
     for (int i = 0; i < size; i++) {
       if (item == list[i]) {
-        return i;
+        temp = i;
       }
     }
-    return -1;
+    return temp;
   }
 }
 
