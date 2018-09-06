@@ -295,7 +295,7 @@ public class List {
         list[i] = list[i - 1];
       }
       list[index] = item;
-    } else {
+    } else if (index < 0) {
       System.out.println("Negative Index Exception");
     }
   }
