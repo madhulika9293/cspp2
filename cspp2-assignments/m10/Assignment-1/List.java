@@ -191,7 +191,7 @@ public class List {
       size--;
     } else if (index < 0) {
       System.out.println("Negative Index Exception");
-    } else {
+    } else if (index > size){
       System.out.println("Invalid Position Exception");
     }
   }
