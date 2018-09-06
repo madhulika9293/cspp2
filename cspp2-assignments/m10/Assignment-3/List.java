@@ -164,12 +164,13 @@ public class List<E> {
    */
   public boolean contains(E item) {
     //Write logic for contains method
-    for (int i = 0; i < size; i++ ) {
+    boolean checkFlag = false;
+    for (int i = 0; i < size; i++) {
       if (list[i] == item) {
-        return true;
+        checkFlag = true;
       }
     }
-    return false;
+    return checkFlag;
   }
   /*
    * Returns the index of the first occurrence
