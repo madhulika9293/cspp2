@@ -166,7 +166,7 @@ public class List<E> {
     //Write logic for contains method
     boolean checkFlag = false;
     for (int i = 0; i < size; i++) {
-      if (list[i] == item) {
+      if (list[i].equals(item)) {
         checkFlag = true;
       }
     }
