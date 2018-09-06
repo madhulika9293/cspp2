@@ -142,7 +142,8 @@ public class List {
    * Will the client invoke resize or is it internal to List class?
    * Should the resize be public method or private?
    * Should the resize method return any values?
-   * You know enough of Object Oriented Programming to answer these questions :-)
+   * You know enough of Object Oriented Programming to answer
+   * these questions :-)
    *
    */
 
@@ -233,8 +234,9 @@ public class List {
    *
    */
   public String toString() {
-    if (size == 0)
+    if (size == 0) {
       return "[]";
+    }
     String str = "[";
     int i = 0;
     for (i = 0; i < size - 1; i++) {
@@ -261,14 +263,15 @@ public class List {
    */
   public int indexOf(final int item) {
     for (int i = 0; i < size; i++) {
-      if (item == list[i])
+      if (item == list[i]) {
         return i;
+      }
     }
     return -1;
   }
   /*Inserts all the elements of specified int
    array to the end of list*/
-  public void addAll(final int items[]) {
+  public void addAll(final int[] items) {
     // write the logic
     for (int i = 0; i < items.length; i++) {
       add(items[i]);
