@@ -1,14 +1,32 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 //A Class is implemented for Student details
+
+/**
+ * Class for student.
+ */
+
 class Student {
+  /**
+   * name description class variable.
+   */
   private String name;
 
+  /**
+   * Constructs the object.
+   *
+   * @param      name  The name
+   */
   public Student(String name) {
     //A constructor used to initialize the instance variables
     this.name = name;
   }
 
+  /**
+   * Gets the name.
+   *
+   * @return     The name.
+   */
   public String getName() {
     //Getter method which returns the value of instance variable
     return this.name;
@@ -25,11 +43,19 @@ class Student {
     return this.getName().equals(that.getName());
   }
 
+  /**
+   * Returns a string representation of the object.
+   *
+   * @return     String representation of the object.
+   */
   public String toString() {
     return this.name;
   }
 }
 
+/**
+ * Class for solution.
+ */
 public class Solution {
 
   /**
@@ -133,15 +159,15 @@ public class Solution {
           break;
         case "indexOf":
           System.out.println(listInteger.indexOf(
-            Integer.parseInt((tokens[1]))));
+                               Integer.parseInt((tokens[1]))));
           break;
         case "get":
           System.out.println(listInteger.get(
-            Integer.parseInt(tokens[1])));
+                               Integer.parseInt(tokens[1])));
           break;
         case "contains":
           System.out.println(listInteger.contains(
-            Integer.parseInt((tokens[1]))));
+                               Integer.parseInt((tokens[1]))));
           break;
         default:
           break;
@@ -295,14 +321,14 @@ public class Solution {
           break;
         case "indexOf":
           System.out.println(listDouble.indexOf(
-            Double.parseDouble(tokens[1])));
+                               Double.parseDouble(tokens[1])));
           break;
         case "get":
           System.out.println(listDouble.get(Integer.parseInt(tokens[1])));
           break;
         case "contains":
           System.out.println(listDouble.contains(
-            Double.parseDouble(tokens[1])));
+                               Double.parseDouble(tokens[1])));
           break;
         default:
           break;
@@ -311,7 +337,7 @@ public class Solution {
       break;
 
     case "O"://This case will be executed for Student type
-    // list i.e to store List of Student Objects
+      // list i.e to store List of Student Objects
       List<Student> listStudent = new List();
       while (stdin.hasNext()) {
         // read the line
