@@ -133,6 +133,9 @@ public class StringList implements StringListInterface {
     size = 0;
   }
 
+  public String[] resize() {
+    return Arrays.copyOf(list, 2 * list.length);
+  }
 
   /*
    * The add method does what the name suggests.
@@ -152,6 +155,9 @@ public class StringList implements StringListInterface {
    */
   public void add(String item) {
     //Inserts the specified element at the end of the list.
+    if (list.length == size) {
+      list = resize();
+    }
     list[size] = item;
     size += 1;
   }
