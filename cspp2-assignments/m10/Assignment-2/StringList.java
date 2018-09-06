@@ -45,7 +45,7 @@ public class StringList implements StringListInterface {
   // declare a private String[]
   // don't create the array yet using new
   // that's the job of the List constructor
-  
+
   /**
    * list class variable.
    */
@@ -74,7 +74,7 @@ public class StringList implements StringListInterface {
   // declare a private int size
   // again, don't initialize it here
   // variable initialization should be done in the constructor
-  
+
   /**
    * size.
    */
@@ -164,7 +164,9 @@ public class StringList implements StringListInterface {
    * @param      items  The items
    */
   public void addAll(String[] items) {
-
+    for (int i = 0; i < items.length; i++) {
+      add(items[i]);
+    }
   }
   /*
    * The size method returns the value of the size.
@@ -319,7 +321,7 @@ public class StringList implements StringListInterface {
    *
    * @param      item  The item
    *
-   * @return     index. 
+   * @return     index.
    */
   public int indexOf(String item) {
     for (int i = 0; i < size; i++) {
