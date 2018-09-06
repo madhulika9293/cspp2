@@ -325,6 +325,13 @@ public class List {
    * of the specified element in this list,
    * or -1 if this list does not contain the element.
    */
+  /**
+   * Searches for the first match.
+   *
+   * @param      item  The item
+   *
+   * @return     element in the given index.
+   */
   public int indexOf(final int item) {
     for (int i = 0; i < size; i++) {
       if (item == list[i]) {
