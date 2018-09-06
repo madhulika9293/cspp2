@@ -182,7 +182,7 @@ public class List<E> {
     //Write logic for indexOf method
     int temp = -1;
     for (int i = 0; i < size; i++) {
-      if (item == list[i]) {
+      if (list[i].equals(item)) {
         temp = i;
       }
     }
