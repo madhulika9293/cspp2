@@ -1,5 +1,6 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
+import java.util.Arrays;
 
 public class List {
   //Implement all the methods mentioned to build a ListADT
@@ -112,6 +113,9 @@ public class List {
    */
   public void add(final int item) {
     //Inserts the specified element at the end of the zelist.
+    if (list.length == size) {
+      list = resize();
+    }
     list[size++] = item;
   }
 
@@ -148,6 +152,10 @@ public class List {
    */
 
   // todo create resize method
+
+  public int[] resize() {
+    return Arrays.copyOf(list, 2 * list.length);
+  }
 
   /*
    * The size method returns the value of the size.
@@ -285,6 +293,9 @@ public class List {
       */
   public void add(final int index, final int item) {
     // write the logic
+    if (list.length == size) {
+      list = resize();
+    }
     if (size == 0 && index == 0) {
       list[0] = item;
       size += 1;
