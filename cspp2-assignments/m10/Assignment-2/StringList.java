@@ -218,7 +218,7 @@ public class StringList implements StringListInterface {
   public void remove(int index) {
     // write the logic for remove here.
     // Think about what to do to the size variable.
-    if (index < size) {
+    if (index < size && index >= 0) {
       for (int i = index; i < size; i++) {
         list[i] = list[i + 1];
       }
