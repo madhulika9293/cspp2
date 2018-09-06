@@ -290,8 +290,8 @@ public class List {
       size += 1;
     } else if (index < size) {
       size += 1;
-      for (int i = size - 1; i > index; i++) {
-        list[i+1] = list[i];
+      for (int i = size - 1; i > index; i--) {
+        list[i] = list[i - 1];
       }
       list[index] = item;
     } else {
