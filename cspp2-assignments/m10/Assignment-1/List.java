@@ -288,7 +288,7 @@ public class List {
     if (size == 0 && index == 0) {
       list[0] = item;
       size += 1;
-    } else if (index < size) {
+    } else if (index > 0 && index < size) {
       size += 1;
       for (int i = size - 1; i > index; i--) {
         list[i] = list[i - 1];
