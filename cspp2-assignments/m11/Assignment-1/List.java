@@ -288,6 +288,7 @@ public class List {
     // write the logic
     for (int i = 0; i < newArray.length; i++) {
       remove(newArray[i]);
+      size -= 1;
     }
 
   }
@@ -317,7 +318,7 @@ public class List {
     } else {
       System.out.println("Index Out of Bounds Exception");
       return null;
-    } 
+    }
     return sL;
   }
 
@@ -345,7 +346,7 @@ public class List {
   */
   public void clear() {
     // write the logic for clear.
-    removeAll(list);
+    removeAll(Arrays.copyOfRange(list, 0, size - 1));
   }
 
   public static void main(final String[] args) {
