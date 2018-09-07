@@ -216,7 +216,7 @@ public class List<E> {
   public List subList(int n, int n2) {
     final int optSize = 500;
     List sL = new List(optSize);
-    if (n < size && n2 <= size && n <= n2 && n > 0 && n2 > 0) {
+    if (n < size && n2 <= size && n <= n2 && n >= 0 && n2 >= 0) {
       for (int i = n; i < n2; i++) {
         sL.add(list[i]);
       }
