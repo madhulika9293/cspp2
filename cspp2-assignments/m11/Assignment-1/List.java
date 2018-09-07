@@ -279,7 +279,7 @@ public class List {
    *
    * @param      newArray  The new array
    */
-  public void addAll(int[] newArray) {
+  public void addAll(final int[] newArray) {
     // write the logic
     for (int i = 0; i < newArray.length; i++) {
       add(newArray[i]);
@@ -313,7 +313,7 @@ public class List {
    *
    * @param      newArray  The new array
    */
-  public void removeAll(int[] newArray) {
+  public void removeAll(final int[] newArray) {
     // write the logic
     for (int i = 0; i < newArray.length; i++) {
       for (int j = 0; j <= count(newArray[i]); j++) {
@@ -338,7 +338,7 @@ public class List {
    *
    * @return     Another List.
    */
-  public List subList(int start, int end) {
+  public List subList(final int start, final int end) {
     // write the logic for subList
     final int optSize = 500;
     List sL = new List(optSize);
@@ -357,7 +357,14 @@ public class List {
   Returns a boolean indicating whether the parameter i.e a List object is
   exactly matching with the given list or not.
   */
-  public boolean equals(List compList) {
+  /**
+   * compares 2 lists.
+   *
+   * @param      compList  The component list
+   *
+   * @return     true or false.
+   */
+  public boolean equals(final List compList) {
     // Replace the code below
     if (size != compList.size()) {
       return false;
@@ -375,6 +382,9 @@ public class List {
   * Think about this case and make the method
   * the simpler.
   */
+  /**
+   * clears the list.
+   */
   public void clear() {
     // write the logic for clear.
     for (int i = 0; i < size; i++) {
@@ -382,7 +392,11 @@ public class List {
     }
     size = 0;
   }
-
+  /**
+   * main function.
+   *
+   * @param      args  The arguments
+   */
   public static void main(final String[] args) {
     // create an object of the list to invoke methods on it
     List l = new List();
