@@ -239,7 +239,7 @@ public class List {
    */
   public boolean contains(int item) {
     // Replace the code below
-    return indexOf(item) == -1;
+    return indexOf(item) != -1;
   }
   /*
    * Returns the index of the first occurrence of the specified element in
@@ -275,6 +275,25 @@ public class List {
       add(newArray[i]);
     }
   }
+
+  /**
+   * calculates frequency of an element in the list.
+   *
+   * @param      item  The item
+   *
+   * @return     count, integer.
+   */
+  public int count(final int item) {
+    // write the logic
+    int c = 0;
+    for (int i = 0; i < size; i++) {
+      if (list[i] == item) {
+        c++;
+      }
+    }
+    return c;
+  }
+
   /*
    Removes all of its elements that are contained in the specified int
    array.
@@ -287,10 +306,10 @@ public class List {
   public void removeAll(int[] newArray) {
     // write the logic
     for (int i = 0; i < newArray.length; i++) {
-      remove(newArray[i]);
-      size -= 1;
+      for (int j = 0;j<=count(newArray[i]);j++) {
+        remove(indexOf(newArray[i]));
+      }
     }
-
   }
   /*
   Returns a list object containing elements, including startIndex and
@@ -346,7 +365,10 @@ public class List {
   */
   public void clear() {
     // write the logic for clear.
-    removeAll(Arrays.copyOfRange(list, 0, size - 1));
+    for (int i = 0; i < size; i++) {
+      list[i] = 0;
+    }
+    size = 0;
   }
 
   public static void main(final String[] args) {
