@@ -65,6 +65,13 @@ class Student {
 public class Solution {
 
   /**
+   * Constructs the object.
+   */
+  private Solution() {
+    //unused
+  }
+
+  /**
    * Int list caller.
    *
    * @param      stdin  The stdin
@@ -237,8 +244,9 @@ public class Solution {
         String[] arrstring3 = tokens[1].split(",");
         List object = l.subList(Integer.parseInt(arrstring3[0]),
                                 Integer.parseInt(arrstring3[1]));
-        if (object != null)
+        if (object != null) {
           System.out.println(object);
+        }
         break;
 
       case "equals":
@@ -361,7 +369,7 @@ public class Solution {
    *
    * @param      stdin  The stdin
    */
-  public static void executeListString(Scanner stdin) {
+  public static void executeListString(final Scanner stdin) {
     List<String> l = new List();
     while (stdin.hasNext()) {
       // read the line
@@ -416,14 +424,15 @@ public class Solution {
           l.removeAll(t2);
         }
         break;
-      case "subList": {
-        if (tokens.length != 2) break;
+      case "subList":
+        if (tokens.length != 2) {
+          break;
+          }
         String[] arrstring3 = tokens[1].split(",");
         List object = l.subList(Integer.parseInt(arrstring3[0]), Integer.parseInt(arrstring3[1]));
         if (object != null)
           System.out.println(object);
         break;
-      }
       case "equals":
         if (tokens.length == 2) {
           String[] lt = tokens[1].split(",");
