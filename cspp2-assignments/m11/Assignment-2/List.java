@@ -27,8 +27,8 @@ public class List<E> {
   public E[] resize() {
     return Arrays.copyOf(list, 2 * list.length);
   }
-
-  /* The add method does what the name suggests.
+ 
+ /* The add method does what the name suggests.
    * Add a generic type item to the list.
    * The assumption is to store the item at the end of the list
    * What is the end of the list?
