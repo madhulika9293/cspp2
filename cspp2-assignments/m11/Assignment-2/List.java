@@ -246,9 +246,6 @@ public class List<E> {
   /*Removes all the elements from list*/
   public void clear() {
     // write the logic for clear.
-    for (int i = 0; i < size; i++) {
-      list[i] = null;
-    }
     size = 0;
   }
 }
