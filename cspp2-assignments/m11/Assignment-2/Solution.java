@@ -49,6 +49,11 @@ class Student {
     return this.getName().equals(that.getName());
   }
 
+  @Override
+  public int hashCode() {
+    return 0;
+  }
+
   /**
    * Returns a string representation of the object.
    *
@@ -427,10 +432,10 @@ public final class Solution {
       case "subList":
         if (tokens.length != 2) {
           break;
-          }
+        }
         String[] arrstring3 = tokens[1].split(",");
         List object = l.subList(Integer.parseInt(arrstring3[0]),
-          Integer.parseInt(arrstring3[1]));
+                                Integer.parseInt(arrstring3[1]));
         if (object != null) {
           System.out.println(object);
         }
@@ -527,7 +532,7 @@ public final class Solution {
         }
         String[] arrstring3 = tokens[1].split(",");
         List object = l.subList(Integer.parseInt(arrstring3[0]),
-          Integer.parseInt(arrstring3[1]));
+                                Integer.parseInt(arrstring3[1]));
         if (object != null) {
           System.out.println(object);
         }
@@ -582,8 +587,8 @@ public final class Solution {
       break;
 
     case "O":
-    //This case will be executed for Student type list
-    // i.e to store List of Student Objects
+      //This case will be executed for Student type list
+      // i.e to store List of Student Objects
       executeListStudent(stdin);
       break;
     default:
