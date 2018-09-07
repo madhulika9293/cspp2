@@ -176,6 +176,7 @@ public class List<E> {
     for (int i = 0; i < size; i++) {
       if (list[i].equals(item)) {
         temp = i;
+        break;
       }
     }
     return temp;
