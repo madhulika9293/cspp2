@@ -70,6 +70,9 @@ public class List {
    * The purpose of the constructor is to initialize the class variables with
    * some default values.
    */
+  /**
+   * Constructs the object.
+   */
   public List() {
 
     // what are the two variables to be initialized here? think about the
@@ -86,7 +89,11 @@ public class List {
     list = new int[max];
     size = 0;
   }
-
+  /**
+   * Constructs the object.
+   *
+   * @param      capacity  The capacity
+   */
   public List(final int capacity) {
     list = new int[capacity];
     size = 0;
@@ -105,7 +112,7 @@ public class List {
   *
   * @param      item  The item
   */
-  public void add(int item) {
+  public void add(final int item) {
     //Inserts the specified element at the end of the list.
     if (list.length == size) {
       list = resize();
@@ -159,7 +166,7 @@ public class List {
    *
    * @param      index  The index
    */
-  public void remove(int index) {
+  public void remove(final int index) {
     // write the logic for remove here. Think about what to do to the size
     // variable.
     if (index >= 0 && index < size) {
@@ -188,7 +195,7 @@ public class List {
    *
    * @return     int value in the list, -1 if its not there.
    */
-  public int get(int index) {
+  public int get(final int index) {
     // Replace the code below to write the code for get
     if (index < 0 || index >= size) {
       return -1;
@@ -240,7 +247,7 @@ public class List {
    *
    * @return     True or False.
    */
-  public boolean contains(int item) {
+  public boolean contains(final int item) {
     // Replace the code below
     return indexOf(item) != -1;
   }
@@ -255,7 +262,7 @@ public class List {
    *
    * @return     element in the given index.
    */
-  public int indexOf(int item) {
+  public int indexOf(final int item) {
     // Replace the code below
     for (int i = 0; i < size; i++) {
       if (item == list[i]) {
