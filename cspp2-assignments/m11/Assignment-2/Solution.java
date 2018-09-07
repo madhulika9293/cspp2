@@ -7,18 +7,18 @@ import java.util.Scanner;
  */
 class Student {
   /**
-   * name description
+   * name description.
    */
   private String name;
 
   /**
    * Constructs the object.
    *
-   * @param      name  The name
+   * @param      nm  The name
    */
-  public Student(String name) {
+  Student(final String nm) {
     //A constructor used to initialize the instance variables
-    this.name = name;
+    this.name = nm;
   }
 
   /**
@@ -39,7 +39,7 @@ class Student {
    * @return     true or false.
    */
   @Override
-  public boolean equals(Object other) {
+  public boolean equals(final Object other) {
     //This method is to check if two students names are equal or not
     if (!(other instanceof Student)) {
       return false;
@@ -69,7 +69,7 @@ public class Solution {
    *
    * @param      stdin  The stdin
    */
-  public static void executeListInteger(Scanner stdin) {
+  public static void executeListInteger(final Scanner stdin) {
     List<Integer> l = new List();
     while (stdin.hasNext()) {
       // read the line
@@ -126,19 +126,21 @@ public class Solution {
         if (tokens.length == 2) {
           String[] t2 = tokens[1].split(",");
           Integer[] a = new Integer[t2.length];
-          for (int i = 0; i < t2.length; i++)
+          for (int i = 0; i < t2.length; i++) {
             a[i] = Integer.parseInt(t2[i]);
+          }
           l.removeAll(a);
         }
         break;
-      case "subList": {
+      case "subList": 
         if (tokens.length != 2) break;
         String[] arrstring3 = tokens[1].split(",");
         List object = l.subList(Integer.parseInt(arrstring3[0]), Integer.parseInt(arrstring3[1]));
-        if (object != null)
+        if (object != null) {
           System.out.println(object);
+        }
         break;
-      }
+      
       case "equals":
         if (tokens.length == 2) {
           String[] lt = tokens[1].split(",");
