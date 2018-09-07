@@ -316,6 +316,7 @@ public class List {
       }
     } else {
       System.out.println("Index Out of Bounds Exception");
+      return null;
     } 
     return sL;
   }
