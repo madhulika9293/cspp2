@@ -90,10 +90,27 @@ class Set {
     }
   }
 
-  public Set intersection(final int set1, final int set2) {
-    // Set rSet = new Set();
-    // return rSet;
-    return null;
+  /**
+   * getter method to access elements.
+   *
+   * @param      index  The index
+   *
+   * @return    integer value.
+   */
+  public int get(final int index) {
+    return setArr[index];
+  }
+
+  public Set intersection(final Set set2) {
+    Set rSet = new Set();
+      for (int j = 0; j < size; j++) {
+        for (int k = 0; k < set2.size; k++) {
+          if (setArr[j] == set2.get(k)) {
+            rSet.add(setArr[j]);
+          }
+        }
+      }
+    return rSet;
   }
 
 
@@ -162,15 +179,15 @@ public final class Solution {
           s.add(intArray);
         }
         break;
-      // case "intersection":
-      //   s = new Set();
-      //   Set t = new Set();
-      //   intArray = intArray(tokens[1]);
-      //   s.add(intArray);
-      //   intArray = intArray(tokens[2]);
-      //   t.add(intArray);
-      //   System.out.println(s.intersection(t));
-      //   break;
+      case "intersection":
+        s = new Set();
+        Set t = new Set();
+        intArray = intArray(tokens[1]);
+        s.add(intArray);
+        intArray = intArray(tokens[2]);
+        t.add(intArray);
+        System.out.println(s.intersection(t));
+        break;
       // case "retainAll":
       //   s = new Set();
       //   intArray = intArray(tokens[1]);
