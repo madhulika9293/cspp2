@@ -157,10 +157,8 @@ class Set {
     int[][] res = new int[size * set2.size][2];
     if (size > 0 && set2.size > 0) {
       for (int i = 0; i < size * set2.size; i++) {
-        for (int j = 0; j < size; j++) {
           res[i][0] = setArr[i / set2.size];
           res[i][1] = set2.get(i % set2.size);
-        }
       }
 
     } else {
