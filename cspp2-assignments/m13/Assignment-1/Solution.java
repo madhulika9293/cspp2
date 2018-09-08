@@ -10,13 +10,20 @@ class Set {
   //your code goes here...
   //Good luck :-)
 
+  /**
+   * array to implement Set - class variable.
+   */
   private int[] setArr;
+
+  /**
+   * class variable for Set size.
+   */
   private int size;
 
   /**
    * Constructs the object.
    */
-  public Set() {
+  Set() {
     final int capacity = 500;
     setArr = new int[capacity];
     size = 0;
@@ -120,6 +127,13 @@ class Set {
     return rSet;
   }
 
+  /**
+   * retains the elements in the Set from a given Array.
+   *
+   * @param      ret   The ret
+   *
+   * @return     a Set with all the elements.
+   */
   public Set retainAll(final int[] ret) {
     Set rSet = new Set();
     for (int j = 0; j < size; j++) {
@@ -132,6 +146,13 @@ class Set {
     return rSet;
   }
 
+  /**
+   * Calculates the Cartesan product of the given 2 sets.
+   *
+   * @param      set2  The set 2
+   *
+   * @return     2D Array for the product.
+   */
   public int[][] cartesianProduct(final Set set2) {
     int[][] res = new int[size * set2.size][2];
     if (size > 0 && set2.size > 0) {
