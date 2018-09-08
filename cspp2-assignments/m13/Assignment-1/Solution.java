@@ -101,17 +101,37 @@ class Set {
     return setArr[index];
   }
 
+  /**
+   * intersection of 2 sets.
+   *
+   * @param      set2  The set 2
+   *
+   * @return     returns the resultant Set.
+   */
   public Set intersection(final Set set2) {
     Set rSet = new Set();
-      for (int j = 0; j < size; j++) {
-        for (int k = 0; k < set2.size; k++) {
-          if (setArr[j] == set2.get(k)) {
-            rSet.add(setArr[j]);
-          }
+    for (int j = 0; j < size; j++) {
+      for (int k = 0; k < set2.size; k++) {
+        if (setArr[j] == set2.get(k)) {
+          rSet.add(setArr[j]);
         }
       }
+    }
     return rSet;
   }
+
+  public Set retainAll(final int[] ret) {
+    Set rSet = new Set();
+    for (int j = 0; j < size; j++) {
+      for (int k = 0; k < ret.length; k++) {
+        if (setArr[j] == ret[k]) {
+          rSet.add(setArr[j]);
+        }
+      }
+    }
+    return rSet;
+  }
+
 
 
 }
@@ -188,13 +208,13 @@ public final class Solution {
         t.add(intArray);
         System.out.println(s.intersection(t));
         break;
-      // case "retainAll":
-      //   s = new Set();
-      //   intArray = intArray(tokens[1]);
-      //   s.add(intArray);
-      //   intArray = intArray(tokens[2]);
-      //   System.out.println(s.retainAll(intArray));
-      //   break;
+      case "retainAll":
+        s = new Set();
+        intArray = intArray(tokens[1]);
+        s.add(intArray);
+        intArray = intArray(tokens[2]);
+        System.out.println(s.retainAll(intArray));
+        break;
       // case "cartesianProduct":
       //   s = new Set();
       //   t = new Set();
