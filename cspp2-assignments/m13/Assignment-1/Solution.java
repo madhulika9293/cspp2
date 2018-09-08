@@ -132,6 +132,17 @@ class Set {
     return rSet;
   }
 
+  public int[][] cartesianProduct(final Set set2) {
+    int[][] res = new int[size * set2.size][2];
+    for (int i = 0; i < size * set2.size; i++) {
+      for (int j = 0; j < size; j++) {
+        res[i][0] = setArr[i / set2.size];
+        res[i][1] = set2.get(i % set2.size);
+      }
+    }
+    return res;
+  }
+
 
 
 }
@@ -215,15 +226,15 @@ public final class Solution {
         intArray = intArray(tokens[2]);
         System.out.println(s.retainAll(intArray));
         break;
-      // case "cartesianProduct":
-      //   s = new Set();
-      //   t = new Set();
-      //   intArray = intArray(tokens[1]);
-      //   s.add(intArray);
-      //   intArray = intArray(tokens[2]);
-      //   t.add(intArray);
-      //   System.out.println(Arrays.deepToString(s.cartesianProduct(t)));
-      //   break;
+      case "cartesianProduct":
+        s = new Set();
+        t = new Set();
+        intArray = intArray(tokens[1]);
+        s.add(intArray);
+        intArray = intArray(tokens[2]);
+        t.add(intArray);
+        System.out.println(Arrays.deepToString(s.cartesianProduct(t)));
+        break;
       default:
         break;
       }
