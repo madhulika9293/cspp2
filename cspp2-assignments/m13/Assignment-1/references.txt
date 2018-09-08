@@ -9,3 +9,5 @@ https://www.google.co.in/search?q=int+cannot+be+dereferenced&oq=int+cannot+be+de
 https://www.geeksforgeeks.org/print-2-d-array-matrix-java/
 https://stackoverflow.com/questions/4662771/setting-values-of-variables-with-an-array-loop-in-java
 https://www.google.co.in/search?q=roundof+java&oq=roundof+java&aqs=chrome..69i57j0l5.5114j0j4&sourceid=chrome&ie=UTF-8
+https://docs.oracle.com/javase/7/docs/api/java/util/Arrays.html#deepToString(java.lang.Object[])
+https://www.google.co.in/search?q=assign+value+to+array+in+loop+java&oq=assign+value+to+array+in+for+loop&aqs=chrome.4.69i57j0l5.12472j0j9&sourceid=chrome&ie=UTF-8
