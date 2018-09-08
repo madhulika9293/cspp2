@@ -134,11 +134,16 @@ class Set {
 
   public int[][] cartesianProduct(final Set set2) {
     int[][] res = new int[size * set2.size][2];
-    for (int i = 0; i < size * set2.size; i++) {
-      for (int j = 0; j < size; j++) {
-        res[i][0] = setArr[i / set2.size];
-        res[i][1] = set2.get(i % set2.size);
+    if (size > 0 && set2.size > 0) {
+      for (int i = 0; i < size * set2.size; i++) {
+        for (int j = 0; j < size; j++) {
+          res[i][0] = setArr[i / set2.size];
+          res[i][1] = set2.get(i % set2.size);
+        }
       }
+
+    } else {
+      res = null;
     }
     return res;
   }
