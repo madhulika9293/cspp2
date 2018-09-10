@@ -2,6 +2,9 @@ import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
 
+/**
+ * Class for sorted set.
+ */
 class SortedSet extends Set {
 }
 
