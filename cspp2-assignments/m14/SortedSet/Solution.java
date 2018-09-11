@@ -6,22 +6,40 @@ import java.util.Arrays;
  * Class for sorted set.
  */
 class SortedSet extends Set {
-
+  /**
+   * Constructs the object.
+   */
   SortedSet() {
     super();
   }
 
+  /**
+   * sorts the given set.
+   *
+   * @param      arrInp  The arr inp
+   * @param      sz      The size
+   */
   public void sortSet(final int[] arrInp, final int sz) {
     Arrays.sort(arrInp, 0, sz);
   }
 
+  /**
+   * adds elements to the set.
+   *
+   * @param      item  The item
+   */
   public void add(final int item) {
     super.add(item);
     sortSet(setArr, size);
     // System.out.println(size);
   }
 
-
+  /**
+   * returns a subset of the given set.
+   *
+   * @param      fromElement  The from element
+   * @param      toElement    To element
+   */
   public void subSet(final int fromElement, final int toElement) {
     if (fromElement <= toElement) {
       SortedSet res = new SortedSet();
@@ -36,6 +54,13 @@ class SortedSet extends Set {
     }
   }
 
+  /**
+   * returs the values of set upto a given element.
+   *
+   * @param      toElement  To element
+   *
+   * @return     { description_of_the_return_value }
+   */
   public SortedSet headSet (final int toElement) {
     SortedSet res = new SortedSet();
     for (int i = 0; i < size; i++) {
@@ -46,6 +71,9 @@ class SortedSet extends Set {
     return res;
   }
 
+  /**
+   * returns the last element of the given set.
+   */
   public void last() {
     if (size == 0) {
       System.out.println("Set Empty Exception");
