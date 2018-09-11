@@ -86,16 +86,25 @@ class SortedSet extends Set {
    *
    * @param      toElement  To element
    *
-   * @return     { description_of_the_return_value }
+   * @return     A sorted Set.
    */
   public SortedSet headSet(final int toElement) {
-    SortedSet res = new SortedSet();
-    for (int i = 0; i < size; i++) {
-      if (setArr[i] < toElement) {
-        res.add(setArr[i]);
+    try {
+      if (toElement > setArr[0]) {
+        SortedSet res = new SortedSet();
+        for (int i = 0; i < size; i++) {
+          if (setArr[i] < toElement) {
+            res.add(setArr[i]);
+          }
+        }
+        return res;
+      } else {
+        throw new SetEmpty();
       }
+    } catch (SetEmpty e) {
+      System.out.println("Set Empty Exception");
     }
-    return res;
+    return null;
   }
 
   /**
@@ -108,8 +117,8 @@ class SortedSet extends Set {
       } else {
         System.out.println(setArr[size - 1]);
       }
-    } catch(SetEmpty e) {
-        System.out.println("Set Empty Exception");
+    } catch (SetEmpty e) {
+      System.out.println("Set Empty Exception");
     }
   }
 }
