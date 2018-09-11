@@ -37,7 +37,7 @@ class SortedSet extends Set {
       }
     } else if (size == 0 && fromElement < toElement){
       System.out.println("{}");
-    } else if (size == 0 && fromElement < toElement ) {
+    } else if (size == 0 && fromElement > toElement ) {
       System.out.println("Invalid Arguments to Subset Exception");
     }
 
