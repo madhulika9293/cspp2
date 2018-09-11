@@ -76,7 +76,6 @@ class SortedSet extends Set {
   public void last() {
     if (size == 0) {
       System.out.println("Set Empty Exception");
-      System.out.println("-1");
     } else {
       System.out.println(setArr[size - 1]);
     }
