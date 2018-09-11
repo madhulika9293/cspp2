@@ -23,19 +23,16 @@ class SortedSet extends Set {
 
 
   public void subSet(final int fromElement, final int toElement) {
-    if (fromElement < 0 || toElement < 0) {
-      System.out.println("Invalid Arguments to Subset Exception");
-    }
-    if (fromElement >= size || toElement >= size) {
-      System.out.println("Invalid Arguments to Subset Exception");
-    } else {
+    if (contains(fromElement) && contains(toElement)) {
       SortedSet res = new SortedSet();
       for (int i = 0; i < size; i++) {
         if (setArr[i] >= fromElement && setArr[i] < toElement) {
           res.add(setArr[i]);
         }
       }
-      System.out.println(res.toString());
+      System.out.println(res);
+    } else {
+      System.out.println("Invalid Arguments to Subset Exception");
     }
   }
 
