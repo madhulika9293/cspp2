@@ -223,7 +223,9 @@ public final class Solution {
       case "headSet":
         // s = new SortedSet();
         intArray = intArray(tokens[1]);
-        System.out.println(s.headSet(intArray[0]));
+        if (s.headSet(intArray[0]) != null) {
+          System.out.println(s.headSet(intArray[0]));
+        }
         break;
       case "last":
         // s = new SortedSet();
