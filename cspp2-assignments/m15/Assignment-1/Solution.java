@@ -3,8 +3,8 @@ import java.util.Scanner;
 import java.util.Arrays;
 
 class InvalidPositionException extends Exception {
-  InvalidPositionException (String s) {
-    super(s);
+  InvalidPositionException () {
+    super();
   }
 }
 /**
@@ -90,7 +90,7 @@ class List {
         }
         size--;
       } else {
-        throw new InvalidPositionException("");
+        throw new InvalidPositionException();
       }
     } catch (InvalidPositionException e) {
         System.out.println("Invalid Position Exception");
