@@ -6,7 +6,10 @@ import java.util.Arrays;
  * Exception for signaling invalid position errors.
  */
 class InvalidPositionException extends Exception {
-  InvalidPositionException () {
+  /**
+   * Constructs the object.
+   */
+  InvalidPositionException() {
     super();
   }
 }
@@ -28,7 +31,7 @@ class List {
   /**
    * Constructs the object.
    */
-  public List() {
+  List() {
 
     final int max = 10;
     list = new int[max];
@@ -40,7 +43,7 @@ class List {
    *
    * @param      capacity  The capacity
    */
-  public List(final int capacity) {
+  List(final int capacity) {
     list = new int[capacity];
     size = 0;
   }
@@ -81,7 +84,9 @@ class List {
   /**
    * removes an element from the list.
    *
-   * @param      index  The index
+   * @param      index                     The index
+   *
+   * @throws     InvalidPositionException
    */
   public void remove(final int index) throws InvalidPositionException {
     // write the logic for remove here. Think about what to do to the size
@@ -197,7 +202,9 @@ class List {
   /**
    * Removes all.
    *
-   * @param      newArray  The new array
+   * @param      newArray                  The new array
+   *
+   * @throws     InvalidPositionException
    */
   public void removeAll(final int[] newArray) throws InvalidPositionException {
     // write the logic
@@ -264,7 +271,16 @@ class List {
     size = 0;
   }
 }
+/**
+ * class for Solution.
+ */
 public final class Solution {
+  /**
+   * Constructs the object.
+   */
+  private Solution() {
+    // unused
+  }
   /**
    * main function.
    *
