@@ -15,6 +15,18 @@ class InvalidArguments extends Exception {
 }
 
 /**
+ * Class for set empty.
+ */
+class SetEmpty extends Exception {
+  /**
+   * Constructs the object.
+   */
+  SetEmpty() {
+    super();
+  }
+}
+
+/**
  * Class for sorted set.
  */
 class SortedSet extends Set {
@@ -90,10 +102,14 @@ class SortedSet extends Set {
    * returns the last element of the given set.
    */
   public void last() {
-    if (size == 0) {
-      System.out.println("Set Empty Exception");
-    } else {
-      System.out.println(setArr[size - 1]);
+    try {
+      if (size == 0) {
+        throw new SetEmpty();
+      } else {
+        System.out.println(setArr[size - 1]);
+      }
+    } catch(SetEmpty e) {
+        System.out.println("Set Empty Exception");
     }
   }
 }
