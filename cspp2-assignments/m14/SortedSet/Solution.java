@@ -23,7 +23,7 @@ class SortedSet extends Set {
 
 
   public void subSet(final int fromElement, final int toElement) {
-    if (setArr[0] < fromElement && setArr[size - 1] > toElement) {
+    if (setArr[0] <= fromElement && setArr[size - 1] >= toElement) {
       SortedSet res = new SortedSet();
       for (int i = 0; i < size; i++) {
         if (setArr[i] >= fromElement && setArr[i] < toElement) {
