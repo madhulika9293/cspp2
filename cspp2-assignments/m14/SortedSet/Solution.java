@@ -32,6 +32,23 @@ class SortedSet extends Set {
     return res;
   }
 
+  public SortedSet headSet (final int toElement) {
+    SortedSet res = new SortedSet();
+    for (int i = 0; i < size; i++) {
+      if (setArr[i] < toElement) {
+        res.add(setArr[i]);
+      }
+    }
+    return res;
+  }
+
+  public void last() {
+    if (size == 0) {
+      System.out.println("Set​ ​ Empty​ ​ Exception");
+    } else {
+      System.out.println(setArr[size - 1]);
+    }
+  }
 }
 
 /**
@@ -129,6 +146,15 @@ public final class Solution {
         // s = new SortedSet();
         intArray = intArray(tokens[1]);
         System.out.println(s.subSet(intArray[0], intArray[1]));
+        break;
+      case "headSet":
+        // s = new SortedSet();
+        intArray = intArray(tokens[1]);
+        System.out.println(s.headSet(intArray[0]));
+        break;
+      case "last":
+        // s = new SortedSet();
+        s.last();
         break;
       default:
         break;
