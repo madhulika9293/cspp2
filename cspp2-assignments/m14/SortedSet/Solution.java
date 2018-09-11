@@ -22,14 +22,12 @@ class SortedSet extends Set {
   }
 
 
-  public SortedSet subSet(final int fromElement, final int toElement) {
+  public void subSet(final int fromElement, final int toElement) {
     if (fromElement < 0 || toElement < 0) {
       System.out.println("Invalid Arguments to Subset Exception");
-      return null;
     }
     if (fromElement >= size || toElement >= size) {
       System.out.println("Invalid Arguments to Subset Exception");
-      return null;
     } else {
       SortedSet res = new SortedSet();
       for (int i = 0; i < size; i++) {
@@ -37,7 +35,7 @@ class SortedSet extends Set {
           res.add(setArr[i]);
         }
       }
-      return res;
+      System.out.println(res.toString());
     }
   }
 
@@ -154,7 +152,8 @@ public final class Solution {
       case "subSet":
         // s = new SortedSet();
         intArray = intArray(tokens[1]);
-        System.out.println(s.subSet(intArray[0], intArray[1]));
+        // System.out.println(s.subSet(intArray[0], intArray[1]));
+        s.subSet(intArray[0], intArray[1]);
         break;
       case "headSet":
         // s = new SortedSet();
