@@ -46,13 +46,13 @@ class Set {
    * @return     boolean - true or false.
    */
   public boolean contains(final int item) {
-    boolean checkFlag = false;
+    // boolean checkFlag = false;
     for (int i = 0; i < size; i++) {
       if (setArr[i] == item) {
-        checkFlag = true;
+        return true;
       }
     }
-    return checkFlag;
+    return false;
   }
 
   /**
@@ -91,7 +91,7 @@ class Set {
    *
    * @param      addArr  The add arr
    */
-  public void add(final int[] addArr) {
+  public void addAll(final int[] addArr) {
     for (int i = 0; i < addArr.length; i++) {
       add(addArr[i]);
     }
@@ -106,6 +106,18 @@ class Set {
    */
   public int get(final int index) {
     return setArr[index];
+  }
+
+  public int indexOf(final int item) {
+    int temp = 0;
+    if (contains(item)) {
+      for (int i = 0; i < size(); i++) {
+        if (setArr[i] == item) {
+          temp = i;
+        }
+      }
+    }
+    return temp;
   }
 
   /**
@@ -157,8 +169,8 @@ class Set {
     int[][] res = new int[size * set2.size][2];
     if (size > 0 && set2.size > 0) {
       for (int i = 0; i < size * set2.size; i++) {
-          res[i][0] = setArr[i / set2.size];
-          res[i][1] = set2.get(i % set2.size);
+        res[i][0] = setArr[i / set2.size];
+        res[i][1] = set2.get(i % set2.size);
       }
 
     } else {
@@ -218,22 +230,22 @@ class Set {
         if (intArray.length == 1) {
           s.add(intArray[0]);
         } else {
-          s.add(intArray);
+          s.addAll(intArray);
         }
         break;
       case "intersection":
         s = new Set();
         Set t = new Set();
         intArray = intArray(tokens[1]);
-        s.add(intArray);
+        s.addAll(intArray);
         intArray = intArray(tokens[2]);
-        t.add(intArray);
+        t.addAll(intArray);
         System.out.println(s.intersection(t));
         break;
       case "retainAll":
         s = new Set();
         intArray = intArray(tokens[1]);
-        s.add(intArray);
+        s.addAll(intArray);
         intArray = intArray(tokens[2]);
         System.out.println(s.retainAll(intArray));
         break;
@@ -241,9 +253,9 @@ class Set {
         s = new Set();
         t = new Set();
         intArray = intArray(tokens[1]);
-        s.add(intArray);
+        s.addAll(intArray);
         intArray = intArray(tokens[2]);
-        t.add(intArray);
+        t.addAll(intArray);
         System.out.println(Arrays.deepToString(s.cartesianProduct(t)));
         break;
       default:

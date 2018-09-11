@@ -7,27 +7,31 @@ import java.util.Arrays;
  */
 class SortedSet extends Set {
 
+  SortedSet() {
+    super();
+  }
+
   public void sortSet(final int[] arrInp, final int sz) {
     Arrays.sort(arrInp, 0, sz);
   }
 
   public void add(final int item) {
-    if (!contains(item)) {
-      setArr[size] = item;
-      size += 1;
-    }
+    super.add(item);
     sortSet(setArr, size);
+    // System.out.println(size);
   }
 
-  public Set subSet(final int fromElement, final int toElement) {
-    SortedSet subS = new SortedSet();
-    for (int i = get(fromElement); i < get(toElement); i++) {
-      subS.add(setArr[i]);
+
+  public SortedSet subSet(final int fromElement, final int toElement) {
+    SortedSet res = new SortedSet();
+    for (int i = 0; i < size; i++) {
+      if (setArr[i] >= fromElement && setArr[i] < toElement) {
+        res.add(setArr[i]);
+      }
     }
-    return subS;
+    return res;
   }
 
-  
 }
 
 /**
@@ -90,34 +94,41 @@ public final class Solution {
         int[] intArray = intArray(tokens[1]);
         if (intArray.length == 1) {
           s.add(intArray[0]);
-        } else {
-          s.add(intArray);
         }
         break;
+      case "addAll":
+        intArray = intArray(tokens[1]);
+        s.addAll(intArray);
+        break;
       case "intersection":
-        s = new SortedSet();
+        // s = new SortedSet();
         SortedSet t = new SortedSet();
         intArray = intArray(tokens[1]);
-        s.add(intArray);
+        s.addAll(intArray);
         intArray = intArray(tokens[2]);
-        t.add(intArray);
+        t.addAll(intArray);
         System.out.println(s.intersection(t));
         break;
       case "retainAll":
-        s = new SortedSet();
+        // s = new SortedSet();
         intArray = intArray(tokens[1]);
-        s.add(intArray);
+        s.addAll(intArray);
         intArray = intArray(tokens[2]);
         System.out.println(s.retainAll(intArray));
         break;
       case "cartesianProduct":
-        s = new SortedSet();
+        // s = new SortedSet();
         t = new SortedSet();
         intArray = intArray(tokens[1]);
-        s.add(intArray);
+        s.addAll(intArray);
         intArray = intArray(tokens[2]);
-        t.add(intArray);
+        t.addAll(intArray);
         System.out.println(Arrays.deepToString(s.cartesianProduct(t)));
+        break;
+      case "subSet":
+        // s = new SortedSet();
+        intArray = intArray(tokens[1]);
+        System.out.println(s.subSet(intArray[0], intArray[1]));
         break;
       default:
         break;
