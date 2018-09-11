@@ -2,6 +2,9 @@ import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
 
+/**
+ * Exception for signaling invalid position errors.
+ */
 class InvalidPositionException extends Exception {
   InvalidPositionException () {
     super();
