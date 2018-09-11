@@ -2,7 +2,13 @@ import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
 
+/**
+ * Class for invalid arguments.
+ */
 class InvalidArguments extends Exception {
+  /**
+   * Constructs the object.
+   */
   InvalidArguments() {
     super();
   }
