@@ -33,6 +33,8 @@ class SortedSet extends Set {
       System.out.println(res);
     } else if (fromElement > setArr[size - 1]) {
       System.out.println("Invalid Arguments to Subset Exception");
+    } else if(size == 0) {
+      System.out.println("{}");
     }
   }
 
