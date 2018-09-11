@@ -31,7 +31,6 @@ class SortedSet extends Set {
   public void add(final int item) {
     super.add(item);
     sortSet(setArr, size);
-    // System.out.println(size);
   }
 
   /**
@@ -61,7 +60,7 @@ class SortedSet extends Set {
    *
    * @return     { description_of_the_return_value }
    */
-  public SortedSet headSet (final int toElement) {
+  public SortedSet headSet(final int toElement) {
     SortedSet res = new SortedSet();
     for (int i = 0; i < size; i++) {
       if (setArr[i] < toElement) {
