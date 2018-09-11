@@ -129,14 +129,18 @@ class Set {
    */
   public Set intersection(final Set set2) {
     Set rSet = new Set();
-    for (int j = 0; j < size; j++) {
-      for (int k = 0; k < set2.size; k++) {
-        if (setArr[j] == set2.get(k)) {
-          rSet.add(setArr[j]);
+    if (size == 0 || set2.size() == 0) {
+      return rSet;
+    } else {
+      for (int j = 0; j < size; j++) {
+        for (int k = 0; k < set2.size; k++) {
+          if (setArr[j] == set2.get(k)) {
+            rSet.add(setArr[j]);
+          }
         }
       }
+      return rSet;
     }
-    return rSet;
   }
 
   /**
