@@ -23,7 +23,7 @@ class SortedSet extends Set {
 
 
   public void subSet(final int fromElement, final int toElement) {
-    if (setArr[0] <= fromElement) {
+    if (setArr[0] <= fromElement && fromElement <= setArr[size - 1]) {
       SortedSet res = new SortedSet();
       for (int i = 0; i < size; i++) {
         if (setArr[i] >= fromElement && setArr[i] < toElement) {
@@ -31,7 +31,7 @@ class SortedSet extends Set {
         }
       }
       System.out.println(res);
-    } else if (fromElement > setArr[size - 1] ) {
+    } else if (fromElement > setArr[size - 1]) {
       System.out.println("Invalid Arguments to Subset Exception");
     }
   }
