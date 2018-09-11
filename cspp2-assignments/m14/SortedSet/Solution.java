@@ -23,13 +23,22 @@ class SortedSet extends Set {
 
 
   public SortedSet subSet(final int fromElement, final int toElement) {
-    SortedSet res = new SortedSet();
-    for (int i = 0; i < size; i++) {
-      if (setArr[i] >= fromElement && setArr[i] < toElement) {
-        res.add(setArr[i]);
-      }
+    if (fromElement < 0 || toElement < 0) {
+      System.out.println("Invalid Arguments to Subset Exception");
+      return null;
     }
-    return res;
+    if (fromElement >= size || toElement >= size) {
+      System.out.println("Invalid Arguments to Subset Exception");
+      return null;
+    } else {
+      SortedSet res = new SortedSet();
+      for (int i = 0; i < size; i++) {
+        if (setArr[i] >= fromElement && setArr[i] < toElement) {
+          res.add(setArr[i]);
+        }
+      }
+      return res;
+    }
   }
 
   public SortedSet headSet (final int toElement) {
@@ -44,7 +53,7 @@ class SortedSet extends Set {
 
   public void last() {
     if (size == 0) {
-      System.out.println("Set​ ​ Empty​ ​ Exception");
+      System.out.println("Set​ Empty​ Exception");
     } else {
       System.out.println(setArr[size - 1]);
     }
