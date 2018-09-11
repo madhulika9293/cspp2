@@ -90,7 +90,6 @@ class List {
         }
         size--;
       } else {
-        // System.out.println("Invalid Position Exception");
         throw new InvalidPositionException("Invalid Position Exception");
       }
     } catch (InvalidPositionException e) {
