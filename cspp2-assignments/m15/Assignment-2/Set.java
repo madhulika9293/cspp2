@@ -129,7 +129,7 @@ class Set {
    */
   public Set intersection(final Set set2) {
     Set rSet = new Set();
-    if (size == 0 || set2.size() == 0) {
+    if (size == 0 || set2.size == 0) {
       return rSet;
     } else {
       for (int j = 0; j < size; j++) {
