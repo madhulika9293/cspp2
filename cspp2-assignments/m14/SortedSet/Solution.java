@@ -6,6 +6,28 @@ import java.util.Arrays;
  * Class for sorted set.
  */
 class SortedSet extends Set {
+
+  public void sortSet(final int[] arrInp, final int sz) {
+    Arrays.sort(arrInp, 0, sz);
+  }
+
+  public void add(final int item) {
+    if (!contains(item)) {
+      setArr[size] = item;
+      size += 1;
+    }
+    sortSet(setArr, size);
+  }
+
+  public Set subSet(final int fromElement, final int toElement) {
+    SortedSet subS = new SortedSet();
+    for (int i = get(fromElement); i < get(toElement); i++) {
+      subS.add(setArr[i]);
+    }
+    return subS;
+  }
+
+  
 }
 
 /**
