@@ -93,7 +93,7 @@ class List {
         throw new InvalidPositionException();
       }
     } catch (InvalidPositionException e) {
-        System.out.println("Invalid Position Exception");
+      System.out.println("Invalid Position Exception");
     }
   }
 
@@ -361,6 +361,12 @@ public final class Solution {
         break;
       case "clear":
         l.clear();
+        break;
+      case "count":
+        if (tokens.length == 2) {
+          System.out.println(l.count(
+                               Integer.parseInt(tokens[1])));
+        }
         break;
       default:
         break;
