@@ -190,11 +190,11 @@ public final class Solution {
         System.out.println(s1.intersection(t));
         break;
       case "retainAll":
-        // s = new SortedSet();
+        SortedSet s2 = new SortedSet();
         intArray = intArray(tokens[1]);
-        s.addAll(intArray);
+        s2.addAll(intArray);
         intArray = intArray(tokens[2]);
-        System.out.println(s.retainAll(intArray));
+        System.out.println(s2.retainAll(intArray));
         break;
       case "cartesianProduct":
         // s = new SortedSet();
