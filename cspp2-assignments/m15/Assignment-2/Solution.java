@@ -181,13 +181,13 @@ public final class Solution {
         s.addAll(intArray);
         break;
       case "intersection":
-        // s = new SortedSet();
+        SortedSet s1 = new SortedSet();
         SortedSet t = new SortedSet();
         intArray = intArray(tokens[1]);
-        s.addAll(intArray);
+        s1.addAll(intArray);
         intArray = intArray(tokens[2]);
         t.addAll(intArray);
-        System.out.println(s.intersection(t));
+        System.out.println(s1.intersection(t));
         break;
       case "retainAll":
         // s = new SortedSet();
