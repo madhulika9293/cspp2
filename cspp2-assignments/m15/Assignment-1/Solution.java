@@ -93,7 +93,7 @@ class List {
         throw new InvalidPositionException("Invalid Position Exception");
       }
     } catch (InvalidPositionException e) {
-        System.out.println("Invalid Position Exception");
+        System.out.println(e);
     }
   }
 
