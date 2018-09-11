@@ -204,7 +204,7 @@ class List {
    *
    * @param      newArray                  The new array
    *
-   * @throws     InvalidPositionException
+   * @throws     InvalidPositionException  invalid positions.
    */
   public void removeAll(final int[] newArray) throws InvalidPositionException {
     // write the logic
