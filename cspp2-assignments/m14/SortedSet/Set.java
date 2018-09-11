@@ -46,13 +46,13 @@ class Set {
    * @return     boolean - true or false.
    */
   public boolean contains(final int item) {
-    // boolean checkFlag = false;
+    boolean checkFlag = false;
     for (int i = 0; i < size; i++) {
       if (setArr[i] == item) {
-        return true;
+        checkFlag = true;
       }
     }
-    return false;
+    return checkFlag;
   }
 
   /**
