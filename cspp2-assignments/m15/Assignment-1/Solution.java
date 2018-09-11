@@ -80,13 +80,12 @@ class List {
     // replace the code below to implement the size method
     return size;
   }
-
   /**
    * removes an element from the list.
    *
    * @param      index                     The index
    *
-   * @throws     InvalidPositionException
+   * @throws     InvalidPositionException  invalid positions.
    */
   public void remove(final int index) throws InvalidPositionException {
     // write the logic for remove here. Think about what to do to the size
@@ -284,7 +283,9 @@ public final class Solution {
   /**
    * main function.
    *
-   * @param      args  The arguments
+   * @param      args                      The arguments
+   *
+   * @throws     InvalidPositionException  invalid positions.
    */
   public static void main(final String[] args) throws InvalidPositionException {
     // create an object of the list to invoke methods on it
