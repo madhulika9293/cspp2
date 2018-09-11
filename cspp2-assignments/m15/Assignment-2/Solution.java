@@ -2,6 +2,12 @@ import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
 
+class InvalidArguments extends Exception {
+  InvalidArguments() {
+    super();
+  }
+}
+
 /**
  * Class for sorted set.
  */
@@ -40,15 +46,19 @@ class SortedSet extends Set {
    * @param      toElement    To element
    */
   public void subSet(final int fromElement, final int toElement) {
-    if (fromElement <= toElement) {
-      SortedSet res = new SortedSet();
-      for (int i = 0; i < size; i++) {
-        if (setArr[i] >= fromElement && setArr[i] < toElement) {
-          res.add(setArr[i]);
+    try {
+      if (fromElement <= toElement) {
+        SortedSet res = new SortedSet();
+        for (int i = 0; i < size; i++) {
+          if (setArr[i] >= fromElement && setArr[i] < toElement) {
+            res.add(setArr[i]);
+          }
         }
+        System.out.println(res);
+      } else {
+        throw new InvalidArguments();
       }
-      System.out.println(res);
-    } else {
+    } catch (InvalidArguments e) {
       System.out.println("Invalid Arguments to Subset Exception");
     }
   }
