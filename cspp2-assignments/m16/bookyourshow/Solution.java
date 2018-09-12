@@ -120,11 +120,7 @@ class BookYourShow {
 				System.out.println(t);
 			}
 		}
-		// if (ticketList.contains(t)) {
-		// 	System.out.println(t);
-		// } else {
-		// 	System.out.println("Invalid");
-		// }
+		
 	}
 
 	void showAll() {
