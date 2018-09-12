@@ -199,11 +199,11 @@ class BookYourShow {
    * @param      showTime  The show time
    * @param      number    The number
    */
-  void printTicket(final String movie, final String showTime, 
+  void printTicket(final String movie, final String showTime,
     final String number) {
     String t = number + " " + movie + " " + showTime;
     boolean flag = true;
-    for (String ticket : ticketList ) {
+    for (String ticket : ticketList) {
       if (t.equals(ticket)) {
         System.out.println(t);
         flag = false;
@@ -218,9 +218,9 @@ class BookYourShow {
    * Shows all.
    */
   void showAll() {
-    for (Show show : showList ) {
-      System.out.println(show.toString() + "," + 
-        Arrays.toString(show.getSeats()).replace(" ", ""));
+    for (Show show : showList) {
+      System.out.println(show.toString() + ","
+        + Arrays.toString(show.getSeats()).replace(" ", ""));
     }
   }
 
