@@ -60,9 +60,9 @@ class Show {
    *
    * @param      index  The index
    */
-  void setSeats(final int index, final String item) {
+  void setSeats(final int index) {
     // movieSeats = seatArr.clone();
-    movieSeats[index] = item;
+    movieSeats[index] = "N/A";
   }
   /**
    * Returns a string representation of the object.
@@ -187,7 +187,7 @@ class BookYourShow {
     for (String seat : seats) {
       for (int i = 0; i < sseats.length; i++) {
         if (seat.equals(sseats[i])) {
-          show.setSeats(i, "N/A");
+          show.setSeats(i);
         }
         flagCheck = true;
       }
