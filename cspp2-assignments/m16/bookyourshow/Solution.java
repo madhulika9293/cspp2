@@ -186,7 +186,7 @@ class BookYourShow {
     // int temp;
     for (String seat : seats) {
       for (int i = 0; i < seats.length; i++) {
-        if (seat == sseats[i]) {
+        if (seat.equals(sseats[i])) {
           show.setSeats(i, "N/A");
           // sseats[i] = "N/A";
         }
