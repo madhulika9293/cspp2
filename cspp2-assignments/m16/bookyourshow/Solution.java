@@ -129,7 +129,7 @@ class BookYourShow {
   /**
    * list of shows.
    */
-  ArrayList<Show> showList;
+  private ArrayList<Show> showList;
   /**
    * list of tickets.
    */
