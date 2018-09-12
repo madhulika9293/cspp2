@@ -61,7 +61,7 @@ class Show {
    * @param      index  The index
    */
   void setSeats(final int index) {
-    this.movieSeats[index] = "N/A";
+    movieSeats[index] = "N/A";
   }
   /**
    * Returns a string representation of the object.
