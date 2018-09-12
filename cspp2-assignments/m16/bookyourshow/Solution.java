@@ -39,7 +39,7 @@ class Show {
 	}
 
 	public String toString() {
-		return movieName + " " + movieTime;
+		return movieName + "," + movieTime;
 	}
 }
 
@@ -113,25 +113,25 @@ class BookYourShow {
 		}
 	}
 
-	void printTicket(String number, String movie, String showTime) {
+	void printTicket(String movie, String showTime, String number) {
 		String t = number + " " + movie + " " + showTime;
-		// for (String ticket : ticketList ) {
-		// 	if (t.equals(ticket)) {
-		// 		System.out.println(t);
-		// 	} else {
-		// 		System.out.println("Invalid");
-		// 	}
-		// }
-		if (ticketList.contains(t)) {
-			System.out.println(t);
-		} else {
-			System.out.println("Invalid");
+		for (String ticket : ticketList ) {
+			if (t.equals(ticket)) {
+				System.out.println(t);
+			} else {
+				System.out.println("Invalid");
+			}
 		}
+		// if (ticketList.contains(t)) {
+		// 	System.out.println(t);
+		// } else {
+		// 	System.out.println("Invalid");
+		// }
 	}
 
 	void showAll() {
 		for (Show show : showList ) {
-			System.out.println(show);
+			System.out.println(show.toString() + "," + Arrays.toString(show.getSeats()).replace(" ",""));
 		}
 	}
 
