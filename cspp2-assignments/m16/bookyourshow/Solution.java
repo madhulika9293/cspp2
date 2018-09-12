@@ -103,10 +103,9 @@ class BookYourShow {
 		String[] sseats = show.getSeats();
 		for (String seat : seats) {
 			for (int i = 0; i < seats.length; i++) {
-				if (seat.equals(sseats[i])) {
+				if (seat.equals(sseats[i]))
 					show.setSeats(i);
 					flag = true;
-				}
 			}
 		}
 		if (flag) {
