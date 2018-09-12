@@ -87,8 +87,11 @@ class Patron {
 
   /**
    * Constructs the object.
+   *
+   * @param      nm    { parameter_description }
+   * @param      mob   The mob
    */
-  Patron(String nm, String mob) {
+  Patron(final String nm, final String mob) {
     patName = nm;
     patNumber = mob;
   }
