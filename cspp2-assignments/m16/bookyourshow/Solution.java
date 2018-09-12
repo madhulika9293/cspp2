@@ -115,12 +115,17 @@ class BookYourShow {
 
 	void printTicket(String movie, String showTime, String number) {
 		String t = number + " " + movie + " " + showTime;
+		boolean flag = true;
 		for (String ticket : ticketList ) {
 			if (t.equals(ticket)) {
 				System.out.println(t);
+				flag = false;
 			}
 		}
-		
+		if (flag) {
+			System.out.println("Invalid");
+		}
+
 	}
 
 	void showAll() {
