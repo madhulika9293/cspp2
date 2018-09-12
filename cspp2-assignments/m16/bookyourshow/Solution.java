@@ -103,9 +103,10 @@ class BookYourShow {
 		String[] sseats = show.getSeats();
 		for (String seat : seats) {
 			for (int i = 0; i < seats.length; i++) {
-				if (seat.equals(sseats[i]))
+				if (seat.equals(sseats[i])) {
 					show.setSeats(i);
 					flag = true;
+				}
 			}
 		}
 		if (flag) {
@@ -130,7 +131,7 @@ class BookYourShow {
 
 	void showAll() {
 		for (Show show : showList ) {
-			System.out.println(show.toString() + "," + Arrays.toString(show.getSeats()).replace(" ",""));
+			System.out.println(show.toString() + "," + Arrays.toString(show.getSeats()).replace(" ", ""));
 		}
 	}
 
