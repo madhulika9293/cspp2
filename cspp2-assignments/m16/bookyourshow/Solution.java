@@ -165,14 +165,15 @@ class BookYourShow {
     return null;
   }
   /**
-   * { function_description }
+   * Books a show.
    *
    * @param      movie     The movie
    * @param      showTime  The show time
    * @param      patron    The patron
    * @param      seats     The seats
    */
-  void bookAShow(String movie, String showTime, Patron patron, String[] seats) {
+  void bookAShow(final String movie, final String showTime,
+    final Patron patron, final String[] seats) {
     Show show = getAShow(movie, showTime);
     if (show == null) {
       System.out.println("No show");
