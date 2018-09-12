@@ -61,7 +61,7 @@ class Show {
    * @param      index  The index
    */
   void setSeats(final int index) {
-    movieSeats[index] = "N/A";
+    this.movieSeats[index] = "N/A";
   }
   /**
    * Returns a string representation of the object.
@@ -185,8 +185,7 @@ class BookYourShow {
     for (String seat : seats) {
       for (int i = 0; i < seats.length; i++) {
         if (seat.equals(sseats[i])) {
-          int temp = i;
-          show.setSeats(temp);
+          show.setSeats(i);
         }
         flagCheck = true;
       }
