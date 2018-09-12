@@ -145,7 +145,7 @@ class BookYourShow {
    *
    * @param      shw   The shw
    */
-  void addAShow(Show shw) {
+  void addAShow(final Show shw) {
     showList.add(shw);
   }
   /**
@@ -156,10 +156,12 @@ class BookYourShow {
    *
    * @return     A show.
    */
-  Show getAShow(String mve, String mvetime) {
-    for (Show show : showList)
-      if (show.getMovie().equals(mve) && show.getMovieTime().equals(mvetime))
+  Show getAShow(final String mve, final String mvetime) {
+    for (Show show : showList) {
+      if (show.getMovie().equals(mve) && show.getMovieTime().equals(mvetime)) {
         return show;
+      }
+    }
     return null;
   }
   /**
