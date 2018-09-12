@@ -186,6 +186,8 @@ class BookYourShow {
       for (int i = 0; i < seats.length; i++) {
         if (seat.equals(sseats[i])) {
           show.setSeats(i);
+          System.out.println(i);
+          System.out.println(sseats[i]);
         }
         flagCheck = true;
       }
