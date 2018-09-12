@@ -118,8 +118,6 @@ class BookYourShow {
 		for (String ticket : ticketList ) {
 			if (t.equals(ticket)) {
 				System.out.println(t);
-			} else {
-				System.out.println("Invalid");
 			}
 		}
 		// if (ticketList.contains(t)) {
