@@ -182,6 +182,7 @@ class BookYourShow {
     }
     boolean flagCheck = false;
     String[] sseats = show.getSeats();
+    int temp;
     for (String seat : seats) {
       for (int i = 0; i < seats.length; i++) {
         if (seat.equals(sseats[i])) {
