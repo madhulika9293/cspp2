@@ -60,8 +60,9 @@ class Show {
    *
    * @param      index  The index
    */
-  void setSeats(final String[] seatArr) {
-    movieSeats = seatArr.clone();
+  void setSeats(final int index, final String item) {
+    // movieSeats = seatArr.clone();
+    movieSeats[index] = item;
   }
   /**
    * Returns a string representation of the object.
@@ -186,13 +187,13 @@ class BookYourShow {
     for (String seat : seats) {
       for (int i = 0; i < seats.length; i++) {
         if (seat == sseats[i]) {
-          // show.setSeats(i);
-          sseats[i] = "N/A";
+          show.setSeats(i, "N/A");
+          // sseats[i] = "N/A";
         }
         flagCheck = true;
       }
     }
-    show.setSeats(sseats);
+    // show.setSeats(sseats);
     if (flagCheck) {
       ticketList.add(patron.getNumber() + " " + movie + " " + showTime);
     }
