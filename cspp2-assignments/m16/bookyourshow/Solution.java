@@ -51,7 +51,7 @@ class Show {
    *
    * @return     The seats.
    */
-  String[] getSeats () {
+  String[] getSeats() {
     return movieSeats;
   }
   /**
@@ -59,7 +59,7 @@ class Show {
    *
    * @param      index  The index
    */
-  void setSeats(int index) {
+  void setSeats(final int index) {
     movieSeats[index] = "N/A";
   }
   /**
@@ -76,8 +76,13 @@ class Show {
  * Class for patron.
  */
 class Patron {
-
+  /**
+   * name of the patron.
+   */
   private String patName;
+  /**
+   * number of the patron.
+   */
   private String patNumber;
 
   /**
