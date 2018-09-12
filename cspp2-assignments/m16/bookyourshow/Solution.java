@@ -180,16 +180,17 @@ class BookYourShow {
       System.out.println("No show");
       return;
     }
-    boolean flag = false;
+    boolean flagCheck = false;
     String[] sseats = show.getSeats();
     for (String seat : seats) {
       for (int i = 0; i < seats.length; i++) {
-        if (seat.equals(sseats[i]))
+        if (seat.equals(sseats[i])) {
           show.setSeats(i);
-        flag = true;
+          flagCheck = true;
+        }
       }
     }
-    if (flag) {
+    if (flagCheck) {
       ticketList.add(patron.getNumber() + " " + movie + " " + showTime);
     }
   }
