@@ -18,7 +18,14 @@ class Show {
    */
   private String[] movieSeats;
 
-  Show(final String mve, String sTime, String[] seats) {
+  /**
+   * Constructs the object.
+   *
+   * @param      mve    The mve
+   * @param      sTime  The s time
+   * @param      seats  The seats
+   */
+  Show(final String mve, final String sTime, final String[] seats) {
     movieName = mve;
     movieTime = sTime;
     movieSeats = seats;
