@@ -118,18 +118,21 @@ public final class Solution {
     int qNumber = 0;
     int totScore = 0;
     for (question q : quiz.getQList()) {
-      System.out.println(q.qText);
-      if (q.corrChoice.equals(quiz.getAnswers(qNumber))) {
-        System.out.println(
-          " Correct Answer! - Marks Awarded: " + q.maxMarks);
-        totScore += Integer.parseInt(q.maxMarks);
-      } else {
-        System.out.println(" Wrong Answer! - Penalty: " + q.penalty);
-        totScore += Integer.parseInt(q.penalty);
+      if (!q.errQues) {
+        System.out.println(q.qText);
+        if (q.corrChoice.equals(quiz.getAnswers(qNumber))) {
+          System.out.println(
+            " Correct Answer! - Marks Awarded: " + q.maxMarks);
+          totScore += Integer.parseInt(q.maxMarks);
+        } else {
+          System.out.println(" Wrong Answer! - Penalty: " + q.penalty);
+          totScore += Integer.parseInt(q.penalty);
+        }
+        qNumber += 1;
       }
-      qNumber += 1;
+      System.out.println("Total Score: " + totScore);
+
     }
-    System.out.println("Total Score: " + totScore);
   }
 }
 
