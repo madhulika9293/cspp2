@@ -76,6 +76,10 @@ public final class Solution {
           System.out.println("Error! Malformed question");
           return;
         }
+        if (Integer.parseInt(nQ.maxMarks) < 0) {
+          System.out.println("“Invalid max marks for " + nQ.qText);
+          return;
+        }
         quiz.addToQuiz(nQ);
       }
       System.out.println(questionCount + " are added to the quiz");
