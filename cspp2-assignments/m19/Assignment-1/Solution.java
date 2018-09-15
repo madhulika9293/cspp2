@@ -70,6 +70,7 @@ public final class Solution {
         String[] arg = s.nextLine().split(":");
         question nQ = new question(arg[0], arg[1], arg[2], arg[3],
                                    arg[4]);
+        quiz.addToQuiz(nQ);
       }
       System.out.println(questionCount + " are added to the quiz");
     }
