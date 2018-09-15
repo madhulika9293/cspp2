@@ -1,0 +1,5 @@
+https://www.geeksforgeeks.org/arraylist-in-java/
+https://www.google.co.in/search?q=check+if+a+string+array+contains+null+java&oq=check+if+a+string+array+contains+null+java&aqs=chrome..69i57.9090j0j1&sourceid=chrome&ie=UTF-8
+https://www.javatpoint.com/substring
+https://www.google.co.in/search?q=arraylist+java+length+example&oq=arraylist+in+java+length&aqs=chrome.1.69i57j0l3.5695j0j4&sourceid=chrome&ie=UTF-8
+https://www.google.co.in/search?newwindow=1&ei=V6CcW63qFcHvrQGdtpboAg&q=access+an+element+in+an+arraylist+java&oq=access+an+ele&gs_l=psy-ab.3.3.0l10.451104.453092.0.456505.13.12.0.0.0.0.292.1715.0j5j4.9.0....0...1c.1.64.psy-ab..4.9.1712...0i67k1j0i131k1.0.rJ-bZBGAAGk
