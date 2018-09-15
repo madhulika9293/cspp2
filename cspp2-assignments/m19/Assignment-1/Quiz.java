@@ -24,7 +24,7 @@ class question {
 		for (String choice : choiceArr) {
 			choices = choices + choice + "	";
 		}
-		System.out.println(choices.substring(0, choices.length() - 3));
+		System.out.println(choices.substring(0, choices.length() - 1));
 		System.out.println("\n");
 	}
 
