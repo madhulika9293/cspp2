@@ -132,7 +132,7 @@ public final class Solution {
       quiz.getQ(i).print();
       String[] tempAns = s.nextLine().split(" ");
       quiz.setA(i, tempAns[1]);
-      System.out.println(quiz.getA(i));
+      // System.out.println(quiz.getA(i));
     }
 
   }
