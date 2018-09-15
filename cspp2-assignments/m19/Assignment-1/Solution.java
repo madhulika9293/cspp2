@@ -82,7 +82,8 @@ public final class Solution {
         //   quiz.addToQuiz(nQ);
         // }
         // if (arg[1].split(" ").length < 2) {
-        //   System.out.println(arg[0] + " does not have enough answer choices");
+        //   System.out.println(arg[0] +
+        //   " does not have enough answer choices");
         //   nQ.errQues = true;
         //   break;
         // }
@@ -106,14 +107,20 @@ public final class Solution {
     // write your code here to display the quiz questions
     // read the user responses from the console
     // store the user respones in the quiz object
-    int i = 0;
-    for (question q : quiz.getQList()) {
-      if (!q.errQues) {
-        quiz.getQ(i).print();
-        String[] tempAns = s.nextLine().split(" ");
-        quiz.setA(i, tempAns[1]);
-      }
-      i += 1;
+    // int i = 0;
+    // for (question q : quiz.getQList()) {
+    //   if (!q.errQues) {
+    //     quiz.getQ(i).print();
+    //     String[] tempAns = s.nextLine().split(" ");
+    //     quiz.setA(i, tempAns[1]);
+    //   }
+    //   i += 1;
+    // }
+    for (int i = 0; i < answerCount; i++) {
+      quiz.getQ(i).print();
+      String[] tempAns = s.nextLine().split(" ");
+      quiz.setA(i, tempAns[1]);
+      System.out.println(quiz.getA(i));
     }
 
   }
@@ -128,22 +135,22 @@ public final class Solution {
     int qNumber = 0;
     int totScore = 0;
     for (question q : quiz.getQList()) {
-      if (!q.errQues) {
-        System.out.println(q.qText);
-        if (q.corrChoice.equals(quiz.getAnswers(qNumber))) {
-          System.out.println(
-            " Correct Answer! - Marks Awarded: " + q.maxMarks);
-          totScore += Integer.parseInt(q.maxMarks);
-        } else {
-          System.out.println(" Wrong Answer! - Penalty: " + q.penalty);
-          totScore += Integer.parseInt(q.penalty);
-        }
-        qNumber += 1;
+      System.out.println(q.qText);
+      if (q.corrChoice.equals(quiz.getAnswers(qNumber))) {
+        System.out.println(" Correct Answer! - Marks Awarded: " + q.maxMarks);
+        totScore += Integer.parseInt(q.maxMarks);
+      } else {
+        System.out.println(" Wrong Answer! - Penalty: " + q.penalty);
+        totScore += Integer.parseInt(q.penalty);
       }
-      System.out.println("Total Score: " + totScore);
-
+      qNumber += 1;
     }
+    System.out.println("Total Score: " + totScore);
+
   }
 }
+
+
+
 
 
