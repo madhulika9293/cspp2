@@ -74,7 +74,7 @@ public final class Solution {
                                    arg[num2]);
         if (nQ.errQues) {
           System.out.println("Error! Malformed question");
-          break;
+          return;
         }
         quiz.addToQuiz(nQ);
       }
@@ -136,7 +136,7 @@ public final class Solution {
     // }
     for (int i = 0; i < answerCount; i++) {
       if (quiz.geterrQues(i)) {
-        break;
+        return;
       }
       quiz.getQ(i).print();
       String[] tempAns = s.nextLine().split(" ");
@@ -157,7 +157,7 @@ public final class Solution {
     int totScore = 0;
     for (question q : quiz.getQList()) {
       if (q.errQues) {
-        break;
+        return;
       }
       System.out.println(q.qText);
       if (q.corrChoice.equals(quiz.getAnswers(qNumber))) {
