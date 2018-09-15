@@ -18,8 +18,8 @@ class question {
 		penalty = penalty1;
 		errQues = false;
 
-		if (qText1 == null || cList1 == null || corrChoice1 == null ||
-			maxMarks1 == null || penalty1 == null) {
+		if (qText1.length() == 0 || cList1.length() == 0 || corrChoice1.length() == 0 ||
+			maxMarks1.length() == 0 || penalty1.length() == 0) {
 			errQues = true;
 		}
 	}
