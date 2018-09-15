@@ -79,8 +79,8 @@ public final class Solution {
         } else {
           quiz.addToQuiz(nQ);
         }
+        System.out.println(questionCount + " are added to the quiz");
       }
-      System.out.println(questionCount + " are added to the quiz");
     }
   }
 
