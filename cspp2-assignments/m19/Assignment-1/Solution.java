@@ -79,7 +79,14 @@ public final class Solution {
         } else {
           quiz.addToQuiz(nQ);
         }
-        System.out.println(questionCount + " are added to the quiz");
+        if (arg[1].split(" ").length < 2) {
+          System.out.println(arg[0] + " does not have enough answer choices");
+          nQ.errQues = true;
+          break;
+        }
+        if (quiz.numQues() == questionCount) {
+          System.out.println(questionCount + " are added to the quiz");
+        }
       }
     }
   }

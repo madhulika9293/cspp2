@@ -79,5 +79,9 @@ class Quiz {
 		return answers[qNum];
 	}
 
+	public int numQues() {
+		return qList.size();
+	}
+
 }
 
