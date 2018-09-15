@@ -134,10 +134,10 @@ public final class Solution {
     //   quiz.setA(i, tempAns[1]);
     //   i += 1;
     // }
+    if (quiz.numQues() == 0) {
+      return;
+    }
     for (int i = 0; i < answerCount; i++) {
-      if (quiz.geterrQues(i)) {
-        return;
-      }
       quiz.getQ(i).print();
       String[] tempAns = s.nextLine().split(" ");
       quiz.setA(i, tempAns[1]);
@@ -153,12 +153,12 @@ public final class Solution {
    */
   public static void displayScore(final Quiz quiz) {
     // write your code here to display the score report
+    if (quiz.numQues() == 0) {
+      return;
+    }
     int qNumber = 0;
     int totScore = 0;
     for (question q : quiz.getQList()) {
-      if (q.errQues) {
-        return;
-      }
       System.out.println(q.qText);
       if (q.corrChoice.equals(quiz.getAnswers(qNumber))) {
         System.out.println(" Correct Answer! - Marks Awarded: " + q.maxMarks);
@@ -173,6 +173,8 @@ public final class Solution {
 
   }
 }
+
+
 
 
 
