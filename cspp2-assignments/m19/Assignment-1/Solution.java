@@ -69,8 +69,10 @@ public final class Solution {
     } else {
       for (int i = 0; i < questionCount; i++) {
         String[] arg = s.nextLine().split(":");
-        question nQ = new question(arg[0], arg[1], arg[2], arg[3],
-                                   arg[4]);
+        final int num1 = 3;
+        final int num2 = 4;
+        question nQ = new question(arg[0], arg[1], arg[2], arg[num1],
+                                   arg[num2]);
         quiz.addToQuiz(nQ);
       }
       System.out.println(questionCount + " are added to the quiz");
@@ -122,4 +124,5 @@ public final class Solution {
     System.out.println("Total Score: " + totScore);
   }
 }
+
 
