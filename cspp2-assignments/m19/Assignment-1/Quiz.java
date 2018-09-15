@@ -7,6 +7,7 @@ class question {
 	String corrChoice;
 	String maxMarks;
 	String penalty;
+	boolean errQues;
 
 	question(final String qText1, final String cList1, final String corrChoice1,
 	         final String maxMarks1, final String penalty1) {
@@ -15,6 +16,12 @@ class question {
 		corrChoice = corrChoice1;
 		maxMarks = maxMarks1;
 		penalty = penalty1;
+		errQues = false;
+
+		if (qText1 == null || cList1 == null || corrChoice1 == null ||
+			maxMarks1 == null || penalty1 == null) {
+			errQues = true;
+		}
 	}
 
 	public void print() {
