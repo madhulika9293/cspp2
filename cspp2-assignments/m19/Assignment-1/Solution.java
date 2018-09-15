@@ -118,21 +118,20 @@ public final class Solution {
     // write your code here to display the quiz questions
     // read the user responses from the console
     // store the user respones in the quiz object
-    // int i = 0;
-    // for (question q : quiz.getQList()) {
-    //   if (!q.errQues) {
-    //     quiz.getQ(i).print();
-    //     String[] tempAns = s.nextLine().split(" ");
-    //     quiz.setA(i, tempAns[1]);
-    //   }
-    //   i += 1;
-    // }
-    for (int i = 0; i < answerCount; i++) {
-      quiz.getQ(i).print();
-      String[] tempAns = s.nextLine().split(" ");
-      quiz.setA(i, tempAns[1]);
-      System.out.println(quiz.getA(i));
+    int i = 0;
+    for (question q : quiz.getQList()) {
+
+        quiz.getQ(i).print();
+        String[] tempAns = s.nextLine().split(" ");
+        quiz.setA(i, tempAns[1]);
+      i += 1;
     }
+    // for (int i = 0; i < answerCount; i++) {
+    //   quiz.getQ(i).print();
+    //   String[] tempAns = s.nextLine().split(" ");
+    //   quiz.setA(i, tempAns[1]);
+    //   System.out.println(quiz.getA(i));
+    // }
 
   }
 
