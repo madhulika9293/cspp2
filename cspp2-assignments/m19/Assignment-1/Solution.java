@@ -72,6 +72,10 @@ public final class Solution {
         final int num2 = 4;
         question nQ = new question(arg[0], arg[1], arg[2], arg[num1],
                                    arg[num2]);
+        if (nQ.errQues) {
+          System.out.println("Error! Malformed question");
+          break;
+        }
         quiz.addToQuiz(nQ);
       }
       System.out.println(questionCount + " are added to the quiz");
@@ -131,6 +135,9 @@ public final class Solution {
     //   i += 1;
     // }
     for (int i = 0; i < answerCount; i++) {
+      if (quiz.geterrQues(i)) {
+        break;
+      }
       quiz.getQ(i).print();
       String[] tempAns = s.nextLine().split(" ");
       quiz.setA(i, tempAns[1]);
@@ -149,6 +156,9 @@ public final class Solution {
     int qNumber = 0;
     int totScore = 0;
     for (question q : quiz.getQList()) {
+      if (q.errQues) {
+        break;
+      }
       System.out.println(q.qText);
       if (q.corrChoice.equals(quiz.getAnswers(qNumber))) {
         System.out.println(" Correct Answer! - Marks Awarded: " + q.maxMarks);

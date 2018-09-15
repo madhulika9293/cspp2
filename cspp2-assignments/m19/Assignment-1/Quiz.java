@@ -35,6 +35,10 @@ class question {
 		// System.out.println();
 	}
 
+	public boolean getErr() {
+		return errQues;
+	}
+
 }
 /**
  * Class for quiz.
@@ -81,6 +85,10 @@ class Quiz {
 
 	public int numQues() {
 		return qList.size();
+	}
+
+	public boolean geterrQues(final int index) {
+		return qList.get(index).getErr();
 	}
 
 }
