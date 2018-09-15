@@ -25,7 +25,7 @@ class question {
 			choices = choices + choice + "	";
 		}
 		System.out.println(choices.substring(0, choices.length() - 1));
-		System.out.println("\n");
+		// System.out.println("\n");
 	}
 
 }
