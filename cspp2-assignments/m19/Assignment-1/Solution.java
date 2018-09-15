@@ -63,36 +63,47 @@ public final class Solution {
     // write your code here to read the questions from the console
     // tokenize the question line and create the question object
     // add the question objects to the quiz class
-
     if (questionCount < 1) {
       System.out.println("Quiz does not have questions");
     } else {
       for (int i = 0; i < questionCount; i++) {
         String[] arg = s.nextLine().split(":");
-        final int num1 = 3;
-        final int num2 = 4;
-        question nQ = new question(arg[0], arg[1], arg[2], arg[num1],
-                                   arg[num2]);
-        quiz.addToQuiz(nQ);
-
-        // if (nQ.errQues) {
-        //   System.out.println("Error! Malformed question");
-        //   break;
-        // } else {
-        //   quiz.addToQuiz(nQ);
-        // }
-        // if (arg[1].split(" ").length < 2) {
-        //   System.out.println(arg[0] +
-        //   " does not have enough answer choices");
-        //   nQ.errQues = true;
-        //   break;
-        // }
-        // if (quiz.numQues() == questionCount) {
-        //   System.out.println(questionCount + " are added to the quiz");
-        // }
+        question nQ = new question(arg[0], arg[1], arg[2], arg[3],
+                                   arg[4]);
       }
       System.out.println(questionCount + " are added to the quiz");
     }
+
+
+    // if (questionCount < 1) {
+    //   System.out.println("Quiz does not have questions");
+    // } else {
+    //   for (int i = 0; i < questionCount; i++) {
+    //     String[] arg = s.nextLine().split(":");
+    //     final int num1 = 3;
+    //     final int num2 = 4;
+    //     question nQ = new question(arg[0], arg[1], arg[2], arg[num1],
+    //                                arg[num2]);
+    //     quiz.addToQuiz(nQ);
+
+    //     // if (nQ.errQues) {
+    //     //   System.out.println("Error! Malformed question");
+    //     //   break;
+    //     // } else {
+    //     //   quiz.addToQuiz(nQ);
+    //     // }
+    //     // if (arg[1].split(" ").length < 2) {
+    //     //   System.out.println(arg[0] +
+    //     //   " does not have enough answer choices");
+    //     //   nQ.errQues = true;
+    //     //   break;
+    //     // }
+    //     // if (quiz.numQues() == questionCount) {
+    //     //   System.out.println(questionCount + " are added to the quiz");
+    //     // }
+    //   }
+    //   System.out.println(questionCount + " are added to the quiz");
+    // }
   }
 
   /**
