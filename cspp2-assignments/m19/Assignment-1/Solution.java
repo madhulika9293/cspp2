@@ -107,8 +107,8 @@ public final class Solution {
     for (question q : quiz.getQList()) {
       if (!q.errQues) {
         quiz.getQ(i).print();
-        // String[] tempAns = s.nextLine();
-        quiz.setA(i, s.nextLine());
+        String[] tempAns = s.nextLine().split(" ");
+        quiz.setA(i, tempAns[1]);
       }
       i += 1;
     }
