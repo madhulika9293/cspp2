@@ -276,7 +276,7 @@ public final class Solution {
         return;
       }
 
-      if (arg[1].split(",").length <= 2) {
+      if (arg[1].split(",").length < 2) {
         System.out.println(arg[0] + " does not have enough answer choices");
         return;
       }
