@@ -59,7 +59,7 @@ class Question {
    */
   public boolean evaluateResponse(final String choice) {
     boolean checkFlg = false;
-    if (choice == getCorrectAnswer()) {
+    if (choice.equals(getCorrectAnswer())) {
       checkFlg = true;
     }
     return checkFlg;
