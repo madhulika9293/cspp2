@@ -128,7 +128,7 @@ class Question {
     System.out.println(questiontext + "(" + maxMarks + ")");
     String s = "";
     for (String c : choices) {
-      s += c + "		";
+      s += c + "	";
     }
     s = s.substring(0, s.length() - 1) + "\n";
     return s;
