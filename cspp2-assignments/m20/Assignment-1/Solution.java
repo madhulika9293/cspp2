@@ -265,12 +265,18 @@ public final class Solution {
       System.out.println("Quiz does not have questions");
       return;
     }
+
     for (int i = 0; i < q; i++) {
 
       String[] arg = scan.nextLine().split(":");
 
       final int num1 = 3;
       final int num2 = 4;
+
+      if (arg.length < 5) {
+        System.out.println("Error! Malformed question");
+        return;
+      }
 
       if (arg[0].length() == 0 || arg[1] == ""
           || arg[2] == "" || arg[num1] == "" || arg[num2] == "") {
@@ -285,7 +291,7 @@ public final class Solution {
 
       if (arg[1].split(",").length < Integer.parseInt(arg[2])) {
         System.out.println(
-          "Error! Correct answer choicenumber is out of range for "
+          "Error! Correct answer choice number is out of range for "
           + arg[0]);
         return;
       }
