@@ -130,7 +130,7 @@ class Question {
     System.out.println(questiontext + "(" + maxMarks + ")");
     String s = "";
     for (String c : choices) {
-      s += c + "	";
+      s += c + "    ";
     }
     s = s.substring(0, s.length() - 1) + "\n";
     return s;
@@ -272,8 +272,9 @@ public final class Solution {
 
       final int num1 = 3;
       final int num2 = 4;
+      final int num3 = 5;
 
-      if (arg.length < 5) {
+      if (arg.length < num3) {
         System.out.println("Error! Malformed question");
         return;
       }
