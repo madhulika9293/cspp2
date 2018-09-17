@@ -332,5 +332,22 @@ public final class Solution {
     if (quiz.getSize() == 0) {
       return;
     }
+
+    int totScore = 0;
+
+    for (int i = 0; i < quiz.getSize(); i++) {
+      Question temp = quiz.getQuestion(i);
+      System.out.println(temp.getQuestionText());
+      if (temp.evaluateResponse(temp.getResponse())) {
+        System.out.println(" Correct Answer! - Marks Awarded: "
+                           + temp.getMaxMarks());
+        totScore += temp.getMaxMarks();
+      } else {
+        System.out.println(" Wrong Answer! - Penalty: " + temp.getPenalty());
+        totScore += temp.getPenalty();
+      }
+    }
+
+    System.out.println("Total Score: " + totScore);
   }
 }
