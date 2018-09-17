@@ -60,8 +60,9 @@ class Question {
   public boolean evaluateResponse(final String choice) {
     if (choice == getCorrectAnswer()) {
       return true;
+    } else {
+      return false;
     }
-    return false;
   }
   /**
    * Gets the correct answer.
@@ -69,7 +70,7 @@ class Question {
    * @return     The correct answer.
    */
   public String getCorrectAnswer() {
-    return choices[correctAnswer];
+    return choices[correctAnswer - 1];
   }
   /**
    * Gets the question text.
