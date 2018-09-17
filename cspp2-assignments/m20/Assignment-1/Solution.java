@@ -58,11 +58,11 @@ class Question {
    * @return     boolean.
    */
   public boolean evaluateResponse(final String choice) {
+    boolean checkFlg = false;
     if (choice == getCorrectAnswer()) {
-      return true;
-    } else {
-      return false;
+      checkFlg = true;
     }
+    return checkFlg;
   }
   /**
    * Gets the correct answer.
@@ -70,6 +70,7 @@ class Question {
    * @return     The correct answer.
    */
   public String getCorrectAnswer() {
+    System.out.println(choices[correctAnswer - 1]);
     return choices[correctAnswer - 1];
   }
   /**
