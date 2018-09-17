@@ -287,7 +287,7 @@ public final class Solution {
       }
 
       if (Integer.parseInt(arg[num2]) > 0) {
-        System.out.println("“Invalid penalty for " + arg[0]);
+        System.out.println("Invalid penalty for " + arg[0]);
         return;
       }
 
