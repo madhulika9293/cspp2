@@ -270,7 +270,7 @@ public final class Solution {
       final int num1 = 3;
       final int num2 = 4;
 
-      if (arg[0] == "" || arg[1] == ""
+      if (arg[0].length() == 0 || arg[1] == ""
           || arg[2] == "" || arg[num1] == "" || arg[num2] == "") {
         System.out.println("Error! Malformed question");
         return;
