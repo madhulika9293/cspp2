@@ -283,6 +283,13 @@ public final class Solution {
         return;
       }
 
+      if (arg[1].split(",").length < Integer.parseInt(arg[2])) {
+        System.out.println(
+          "Error! Correct answer choicenumber is out of range for "
+          + arg[0]);
+        return;
+      }
+
       if (Integer.parseInt(arg[num1]) <= 0) {
         System.out.println("Invalid max marks for " + arg[0]);
         return;
