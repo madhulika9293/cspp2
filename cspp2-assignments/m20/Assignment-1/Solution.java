@@ -130,7 +130,7 @@ class Question {
     System.out.println(questiontext + "(" + maxMarks + ")");
     String s = "";
     for (String c : choices) {
-      s += c + "    ";
+      s += c + "\t";
     }
     s = s.substring(0, s.length() - 1) + "\n";
     return s;
@@ -367,3 +367,5 @@ public final class Solution {
     System.out.println("Total Score: " + totScore);
   }
 }
+
+
