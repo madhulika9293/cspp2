@@ -316,6 +316,11 @@ public final class Solution {
       return;
     }
 
+    for (int i = 0; i < quiz.getSize(); i++) {
+      System.out.println(quiz.getQuestion(i));
+      quiz.getQuestion(i).setResponse(scan.nextLine());
+    }
+
   }
   /**
    * Displays the score report.
