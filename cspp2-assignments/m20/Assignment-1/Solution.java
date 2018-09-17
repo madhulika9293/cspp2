@@ -70,7 +70,7 @@ class Question {
    * @return     The correct answer.
    */
   public String getCorrectAnswer() {
-    System.out.println(choices[correctAnswer - 1]);
+    // System.out.println(choices[correctAnswer - 1]);
     return choices[correctAnswer - 1];
   }
   /**
