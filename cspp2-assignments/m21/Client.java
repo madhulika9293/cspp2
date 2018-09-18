@@ -25,23 +25,23 @@ public class Client {
 				break;
 			case "Foodlog":
 				person.foodSumm();
-				System.out.println("\n");
+				// System.out.println("\n");
 				break;
 			case "Waterlog":
 				person.waterSumm();
-				System.out.println("\n");
+				// System.out.println("\n");
 				break;
 			case "PhysicalActivitylog":
 				person.activitySumm();
-				System.out.println("\n");
+				// System.out.println("\n");
 				break;
 			case "Weightlog":
 				person.weightSumm();
-				System.out.println("\n");
+				// System.out.println("\n");
 				break;
 			case "Sleeplog":
 				person.sleepSumm();
-				System.out.println("\n");
+				// System.out.println("\n");
 				break;
 			case "Summary":
 				if (inputs.length == 1) {
