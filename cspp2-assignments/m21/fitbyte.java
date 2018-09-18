@@ -18,7 +18,7 @@ class foodlog {
 
 
 	public String toString() {
-		return "Food" + "\n" + "Date:" + date + "\n" + "Time:" + time + "\n"
+		return "Date:" + date + "\n" + "Time:" + time + "\n"
 		       + "Name:" + name + "\n" + "Quantity:" + quantity;
 	}
 
@@ -40,7 +40,7 @@ class waterlog {
 	}
 
 	public String toString() {
-		return "Water" + "\n" + "Date:" + date + "\n" + "Quantity:"
+		return "Date:" + date + "\n" + "Quantity:"
 		       + quantity + "ml";
 	}
 
@@ -64,7 +64,7 @@ class activitylog {
 	}
 
 	public String toString() {
-		return "PhysicalActivity" + "\n" + "Name:" + name + "\n" + "Notes:" + notes + "\n"
+		return "Name:" + name + "\n" + "Notes:" + notes + "\n"
 		       + "Date:" + date + "\n" + "Starttime:" + startTime + "\n"
 		       + "Endtime:" + endTime;
 	}
@@ -85,7 +85,7 @@ class sleeplog {
 	}
 
 	public String toString() {
-		return "Sleep" + "\n" + "Date:" + date + "\n"
+		return "Date:" + date + "\n"
 		       + "Starttime:" + startTime + "\n" + "Endtime:" + endTime;
 	}
 }
@@ -105,7 +105,7 @@ class weightlog {
 	}
 
 	public String toString() {
-		return "Weight" + "\n" + "Date:" + date + "\n" + "Time:" + time + "\n"
+		return "Date:" + date + "\n" + "Time:" + time + "\n"
 		       + "Weight:" + weight + "\n" + "Fat:" + fatPer;
 	}
 }

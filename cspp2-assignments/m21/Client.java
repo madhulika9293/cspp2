@@ -24,22 +24,27 @@ public class Client {
 				person.addSleep(new sleeplog(inputs[1].split(",")));
 				break;
 			case "Foodlog":
+				System.out.println("Food");
 				person.foodSumm();
 				System.out.print("\n");
 				break;
 			case "Waterlog":
+				System.out.println("Water");
 				person.waterSumm();
 				System.out.print("\n");
 				break;
 			case "PhysicalActivitylog":
+				System.out.println("PhysicalActivity");
 				person.activitySumm();
 				System.out.print("\n");
 				break;
 			case "Weightlog":
+				System.out.println("Weight");
 				person.weightSumm();
 				System.out.print("\n");
 				break;
 			case "Sleeplog":
+				System.out.println("Sleep");
 				person.sleepSumm();
 				System.out.print("\n");
 				break;
