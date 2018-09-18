@@ -29,19 +29,19 @@ public class Client {
 				break;
 			case "Waterlog":
 				person.waterSumm();
-				// System.out.println("\n");
+				System.out.print("\n");
 				break;
 			case "PhysicalActivitylog":
 				person.activitySumm();
-				// System.out.println("\n");
+				System.out.print("\n");
 				break;
 			case "Weightlog":
 				person.weightSumm();
-				// System.out.println("\n");
+				System.out.print("\n");
 				break;
 			case "Sleeplog":
 				person.sleepSumm();
-				// System.out.println("\n");
+				System.out.print("\n");
 				break;
 			case "Summary":
 				if (inputs.length == 1) {
