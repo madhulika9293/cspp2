@@ -176,7 +176,7 @@ public class fitbyte {
 	}
 
 	public void summary() {
-		System.out.println("Food");
+		System.out.println("Food ");
 		for (foodlog entry : food) {
 			System.out.println(entry);
 		}

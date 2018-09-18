@@ -24,7 +24,7 @@ public class Client {
 				person.addSleep(new sleeplog(inputs[1].split(",")));
 				break;
 			case "Foodlog":
-				System.out.println("Food");
+				System.out.println("Food ");
 				person.foodSumm();
 				System.out.print("\n");
 				break;
