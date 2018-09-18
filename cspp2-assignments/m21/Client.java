@@ -46,7 +46,7 @@ public class Client {
 			case "Sleeplog":
 				System.out.println("Sleep");
 				person.sleepSumm();
-				System.out.print("\n");
+				System.out.println(" ");
 				break;
 			case "Summary":
 				if (inputs.length == 1) {
