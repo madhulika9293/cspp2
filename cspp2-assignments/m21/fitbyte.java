@@ -158,6 +158,10 @@ public class fitbyte {
 	}
 
 	public void activitySumm() {
+		if (activity.isEmpty()) {
+			System.out.println("None");
+			return;
+		}
 		for (activitylog entry : activity) {
 			System.out.println(entry);
 		}
