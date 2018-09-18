@@ -176,18 +176,23 @@ public class fitbyte {
 	}
 
 	public void summary() {
+		System.out.println("Food");
 		for (foodlog entry : food) {
 			System.out.println(entry);
 		}
+		System.out.println("Water");
 		for (waterlog entry : water) {
 			System.out.println(entry);
 		}
+		System.out.println("PhysicalActivity");
 		for (activitylog entry : activity) {
 			System.out.println(entry);
 		}
+		System.out.println("Weight");
 		for (weightlog entry : weight) {
 			System.out.println(entry);
 		}
+		System.out.println("Sleep");
 		for (sleeplog entry : sleep) {
 			System.out.println(entry);
 		}
@@ -195,26 +200,31 @@ public class fitbyte {
 	}
 
 	public void summary(final String day) {
+		System.out.println("Food");
 		for (foodlog entry : food) {
 			if (entry.getdate().equals(day)) {
 				System.out.println(entry);
 			}
 		}
+		System.out.println("Water");
 		for (waterlog entry : water) {
 			if (entry.getdate().equals(day)) {
 				System.out.println(entry);
 			}
 		}
+		System.out.println("PhysicalActivity");
 		for (activitylog entry : activity) {
 			if (entry.getdate().equals(day)) {
 				System.out.println(entry);
 			}
 		}
+		System.out.println("Weight");
 		for (weightlog entry : weight) {
 			if (entry.getdate().equals(day)) {
 				System.out.println(entry);
 			}
 		}
+		System.out.println("Sleep");
 		for (sleeplog entry : sleep) {
 			if (entry.getdate().equals(day)) {
 				System.out.println(entry);
