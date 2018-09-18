@@ -25,7 +25,7 @@ public class Client {
 				break;
 			case "Foodlog":
 				person.foodSumm();
-				System.out.println("\n");
+				System.out.print("\n");
 				break;
 			case "Waterlog":
 				person.waterSumm();
