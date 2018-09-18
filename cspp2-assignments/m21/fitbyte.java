@@ -189,8 +189,12 @@ public class fitbyte {
 			System.out.println(entry);
 		}
 		System.out.println("PhysicalActivity");
-		for (activitylog entry : activity) {
-			System.out.println(entry);
+		if (activity.isEmpty()) {
+			System.out.println("None");
+		} else {
+			for (activitylog entry : activity) {
+				System.out.println(entry);
+			}
 		}
 		System.out.println("Weight");
 		for (weightlog entry : weight) {
