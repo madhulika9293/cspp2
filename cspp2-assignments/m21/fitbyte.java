@@ -86,7 +86,7 @@ class sleeplog {
 
 	public String toString() {
 		return "Sleep" + "\n" + "Date:" + date + "\n"
-		+ "Starttime:" + startTime + "\n" + "Endtime:" + endTime;
+		       + "Starttime:" + startTime + "\n" + "Endtime:" + endTime;
 	}
 }
 
@@ -182,15 +182,16 @@ public class fitbyte {
 		for (waterlog entry : water) {
 			System.out.println(entry);
 		}
-		for (sleeplog entry : sleep) {
-			System.out.println(entry);
-		}
 		for (activitylog entry : activity) {
 			System.out.println(entry);
 		}
 		for (weightlog entry : weight) {
 			System.out.println(entry);
 		}
+		for (sleeplog entry : sleep) {
+			System.out.println(entry);
+		}
+
 	}
 
 	public void summary(final String day) {
@@ -204,11 +205,6 @@ public class fitbyte {
 				System.out.println(entry);
 			}
 		}
-		for (sleeplog entry : sleep) {
-			if (entry.getdate().equals(day)) {
-				System.out.println(entry);
-			}
-		}
 		for (activitylog entry : activity) {
 			if (entry.getdate().equals(day)) {
 				System.out.println(entry);
@@ -219,6 +215,12 @@ public class fitbyte {
 				System.out.println(entry);
 			}
 		}
+		for (sleeplog entry : sleep) {
+			if (entry.getdate().equals(day)) {
+				System.out.println(entry);
+			}
+		}
+
 	}
 
 
