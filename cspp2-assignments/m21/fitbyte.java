@@ -41,7 +41,7 @@ class waterlog {
 
 	public String toString() {
 		return "Water" + "\n" + "Date:" + date + "\n" + "Quantity:"
-		       + quantity;
+		       + quantity + "ml";
 	}
 
 }
