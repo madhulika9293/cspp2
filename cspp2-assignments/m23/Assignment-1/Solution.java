@@ -102,7 +102,7 @@ public class Solution {
         while (sc1.hasNext()) {
           s += sc1.nextLine() + " ";
         }
-        System.out.println(s);
+        // System.out.println(s);
         input.add(s.replaceAll("[^a-zA-Z0-9 ]", "").toLowerCase());
       } catch (Exception e) {
         System.out.println(e.getMessage());
