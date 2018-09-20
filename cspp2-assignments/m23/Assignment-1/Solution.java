@@ -56,10 +56,11 @@ class Document {
    * @return     The modulus.
    */
   public double getMod() {
-    double mod = 0.0;
+    int mod = 0;
     for (String word : docFreq.keySet()) {
-      System.out.println(word);
-      mod = mod + Math.pow(docFreq.get(word), 2);
+      // mod = mod + Math.pow(docFreq.get(word), 2);
+      mod = mod + (docFreq.get(word) * docFreq.get(word));
+      System.out.println(word + ": " + docFreq.get(word) + " " + mod);
     }
     return Math.sqrt(mod);
   }
