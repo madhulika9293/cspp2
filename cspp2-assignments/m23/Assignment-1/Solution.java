@@ -103,7 +103,7 @@ public class Solution {
         }
         System.out.println(s);
         input.add(s);
-      } catch (FileNotFoundException e) {
+      } catch (Exception e) {
         System.out.println(e.getMessage());
       }
     }
