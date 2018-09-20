@@ -57,7 +57,7 @@ class Document {
    */
   public double getMod() {
     double mod = 0.0;
-    for (String word : doc) {
+    for (String word : docFreq.keySet()) {
       mod = mod + Math.pow(docFreq.get(word), 2);
     }
     return Math.sqrt(mod);
