@@ -115,12 +115,44 @@ class Document {
 
     return (int) Math.round(docDist * 100);
   }
+
 }
 
-public class Solution345 {
-  public static void main(String[] args) {
+public class Solution {
 
+  public static int lcs(final String s1, final String s2) {
+    int l1 = s1.length();
+    int l2 = s2.length();
+
+    int max = 0;
+    double lcsPer = 0.0;
+
+    int[][] lcString = new int[l1][l2];
+
+    for (int i = 0; i < l1; i++) {
+      for (int j = 0; j < l2; j++) {
+        if (s1.charAt(i) == s2.charAt(j)) {
+          if (i == 0 || j == 0) {
+            lcString[i][j] = 1;
+          } else {
+            lcString[i][j] = lcString[i - 1][j - 1] + 1;
+          }
+          if (max < lcString[i][j]) {
+            max = lcString[i][j];
+          }
+        }
+      }
+    }
+    // System.out.println(max);
+    // System.out.println(l1);
+    // System.out.println(l2);
+    lcsPer = (2 * max * 100) / (l1 + l2);
+    return (int) lcsPer;
+  }
+
+  public static void main(String[] args) {
     ArrayList<String> input = new ArrayList<String>();
+    ArrayList<String> inputString = new ArrayList<String>();
     ArrayList<String> inputnames = new ArrayList<String>();
 
     Scanner sc = new Scanner(System.in);
@@ -141,6 +173,7 @@ public class Solution345 {
         }
         // System.out.println(s);
         input.add(s.replaceAll("[^a-zA-Z0-9 ]", " ").replaceAll(" +", " ").toLowerCase());
+        inputString.add(s);
       } catch (Exception e) {
         System.out.println(e.getMessage());
       }
@@ -148,16 +181,25 @@ public class Solution345 {
 
     System.out.println(heading);
     for (int i = 0; i < input.size(); i++) {
-      String sOut = inputnames.get(i) + "\t";
+      String sOut = inputnames.get(i) + "\t\t";
       Document docCheck = new Document(input.get(i).split(" "));
       for (int j = 0; j < input.size(); j++) {
         Document docCheckWith = new Document(input.get(j).split(" "));
         sOut += docCheck.getDist(docCheckWith);
-        sOut += "\t";
+        sOut += "\t\t";
         // System.out.println(docCheck.getDist(docCheckWith));
       }
       System.out.println(sOut);
     }
+
+    System.out.println("\n");
+
+    for (int i = 0; i < inputString.size(); i++) {
+      for (int j = 0; j < inputString.size(); j++) {
+        System.out.println(lcs(inputString.get(i), inputString.get(j)));
+      }
+    }
+
   }
 }
 

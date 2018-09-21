@@ -1,3 +1,0 @@
-			File8.txt	File9.txt	
-File8.txt	100	52	
-File9.txt	52	100	
