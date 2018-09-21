@@ -5,6 +5,9 @@ import java.util.ArrayList;
 import java.util.Set;
 import java.io.File;
 
+/**
+ * Class for document.
+ */
 class Document {
 
   /**
@@ -15,7 +18,7 @@ class Document {
   /**
    * frequency of words in the given document.
    */
-  private HashMap <String, Integer> docFreq;
+  private HashMap<String, Integer> docFreq;
 
   /**
    * Constructs the object.
@@ -26,7 +29,12 @@ class Document {
     doc = docx;
     docFreq = new HashMap<>();
   }
-
+  
+  /**
+   * Gets the document.
+   *
+   * @return     The document.
+   */
   public String[] getDoc() {
     return doc;
   }
@@ -52,7 +60,7 @@ class Document {
   /**
    * Gets the word frequency.
    *
-   * @param      word2  The word 2
+   * @param      word  The word
    *
    * @return     The word frequency.
    */
