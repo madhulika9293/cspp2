@@ -12,7 +12,7 @@ class Task {
   /**
    * title of the task.
    */
-  String title;
+  private String title;
   /**
    * person the task is assigned to.
    */
@@ -50,6 +50,8 @@ class Task {
    * @param      important1       The important 1
    * @param      urgent1          The urgent 1
    * @param      status1          The status 1
+   * 
+   * @throws exception.
    */
   Task(final String title1, final String assignedTo1,
        final int timeToComplete1, final boolean important1,
@@ -217,6 +219,13 @@ class Todoist {
     // System.out.println(tsk);
   }
 
+  /**
+   * Gets the next task.
+   *
+   * @param      person  The person
+   *
+   * @return     The next task.
+   */
   public Task getNextTask(final String person) {
     Task out = new Task();
     boolean flag = false;
@@ -252,6 +261,14 @@ class Todoist {
     return out;
   }
 
+  /**
+   * Gets the next task.
+   *
+   * @param      person  The person
+   * @param      count   The count
+   *
+   * @return     The next task.
+   */
   public Task[] getNextTask(final String person, final int count) {
     Task[] out = new Task[count];
     boolean flag = false;
@@ -275,6 +292,11 @@ class Todoist {
     return out;
   }
 
+  /**
+   * time for completing tasks.
+   *
+   * @return     INTEGER.
+   */
   public int totalTime4Completion() {
     int time = 0;
     for (int i = 0; i < size; i++) {
