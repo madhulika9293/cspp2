@@ -5,11 +5,6 @@ import java.util.Arrays;
   * write your code below this comment
   */
 
-// class titleException extends Exception {
-// 	titleException() {
-
-// 	}
-// }
 /**
  * Class for task.
  */
@@ -255,24 +250,11 @@ class Todoist {
 
 		return out;
 	}
-	/**
-	 * Returns a string representation of the object.
-	 */
-	public String toString() {
-		String out = "";
-		System.out.print("called");
-		for (Task entry : tasks) {
-			out  = out + entry.getTitle() + ", " + entry.getassignedTo()
-			+ ", " + entry.gettimeToComplete() + ", " + entry.getImportant()
-			+ ", " + entry.getUrgent() + ", " + entry.getStatus() + "\n";
-		}
-		return out;
-		// return out.substring(0, out.length() - 1);
-	}
-	public int dummy() {
-		return 0;
-	}
 
+	public String toString() {
+		String out = "Init";
+		return out;
+	}
 }
 
 /**
