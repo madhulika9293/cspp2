@@ -328,7 +328,12 @@ class Todoist {
  * Class for todoist main.
  */
 public class TodoistMain {
-
+  /**
+   * Constructs the object.
+   */
+  private TodoistMain() {
+    //unused
+  }
   /**
    * Starts a test.
    */
@@ -401,12 +406,16 @@ public class TodoistMain {
    * @throws     Exception  if task inputs are invalid
    */
   public static Task createTask(final String[] tokens) throws Exception {
+    final int num1 = 3;
+    final int num2 = 4;
+    final int num3 = 5;
+    final int num4 = 6;
     String title = tokens[1];
     String assignedTo = tokens[2];
-    int timeToComplete = Integer.parseInt(tokens[3]);
-    boolean important = tokens[4].equals("y");
-    boolean urgent = tokens[5].equals("y");
-    String status = tokens[6];
+    int timeToComplete = Integer.parseInt(tokens[num1]);
+    boolean important = tokens[num2].equals("y");
+    boolean urgent = tokens[num3].equals("y");
+    String status = tokens[num4];
     return new Task(
              title, assignedTo, timeToComplete, important, urgent, status);
   }
