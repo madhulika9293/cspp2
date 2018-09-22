@@ -210,7 +210,7 @@ class Todoist {
 	public void addTask(final Task tsk) {
 		tasks[size] = tsk;
 		size += 1;
-		System.out.println(tsk);
+		// System.out.println(tsk);
 	}
 
 	public Task getNextTask(final String person) {
@@ -246,17 +246,17 @@ class Todoist {
 
 		return out;
 	}
-	// /**
-	//  * Returns a string representation of the object.
-	//  */
-	// public String toString() {
-	// 	String out = "";
-	// 	for (Task entry : tasks) {
-	// 		out += entry.toString();
-	// 		out += "\n";
-	// 	}
-	// 	return out;
-	// }
+	/**
+	 * Returns a string representation of the object.
+	 */
+	public String toString() {
+		String out = "";
+		for (Task entry : tasks) {
+			out += entry.toString();
+			out += "\n";
+		}
+		return out.substring(0, out.length() - 1);
+	}
 
 }
 
@@ -280,12 +280,12 @@ public class TodoistMain {
 			case "add-task":
 				testAddTask(todo, tokens);
 				break;
-			// case "print-todoist":
-			// 	System.out.println(todo);
-			// 	break;
-			// case "get-next":
-			// 	System.out.println(todo.getNextTask(tokens[1]));
-			// 	break;
+			case "print-todoist":
+				System.out.println(todo);
+				break;
+			case "get-next":
+				System.out.println(todo.getNextTask(tokens[1]));
+				break;
 			// case "get-next-n":
 			// 	int n = Integer.parseInt(tokens[2]);
 			// 	Task[] tasks = todo.getNextTask(tokens[1], n);
