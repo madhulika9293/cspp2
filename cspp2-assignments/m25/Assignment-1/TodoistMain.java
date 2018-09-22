@@ -17,7 +17,7 @@ class Task {
 	/**
 	 * title of the task.
 	 */
-	private String title;
+	String title;
 	/**
 	 * person the task is assigned to.
 	 */
@@ -135,17 +135,20 @@ class Todoist {
 		System.out.println(tsk);
 	}
 
-	/**
-	 * Returns a string representation of the object.
-	 */
-	public String toString() {
-		String out = "";
-		for (Task entry : tasks) {
-			out += entry.toString();
-			out += "\n";
-		}
-		return out;
+	public Task getNextTask(final String person) {
+		return null;
 	}
+	// /**
+	//  * Returns a string representation of the object.
+	//  */
+	// public String toString() {
+	// 	String out = "";
+	// 	for (Task entry : tasks) {
+	// 		out += entry.toString();
+	// 		out += "\n";
+	// 	}
+	// 	return out;
+	// }
 
 }
 
