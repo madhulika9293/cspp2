@@ -53,7 +53,7 @@ class Task {
 	     final int timeToComplete1, final boolean important1,
 	     final boolean urgent1, final String status1) throws Exception {
 
-		if (title1.length() != 0) {
+		if (title1.length() > 0) {
 			title = title1;
 		} else {
 			throw new Exception("Title not provided");
