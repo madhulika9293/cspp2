@@ -256,7 +256,7 @@ class Todoist {
     for (int i = 0; i < size; i++) {
       out = out + tasks[i].getTitle() + ", " + tasks[i].getassignedTo() +  ", "
             + tasks[i].gettimeToComplete() +  ", " + tasks[i].getImportant()
-            + tasks[i].getUrgent() + ", " +  tasks[i].getStatus() + "\n";
+            +  ", " + tasks[i].getUrgent() + ", " +  tasks[i].getStatus() + "\n";
     }
     return out;
   }
