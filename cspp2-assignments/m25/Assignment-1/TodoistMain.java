@@ -224,7 +224,7 @@ class Todoist {
     for (Task entry : tasks) {
       if (entry.getassignedTo().equals(person)) {
         if (entry.getStatus().equals("todo")
-                && entry.getImp() && !entry.getUrg()) {
+            && entry.getImp() && !entry.getUrg()) {
           out = entry;
           flag = true;
         }
@@ -235,7 +235,7 @@ class Todoist {
       for (Task entry : tasks) {
         if (entry.getassignedTo().equals(person)) {
           if (entry.getStatus().equals("todo")
-                  && entry.getImp() && !entry.getUrg()) {
+              && entry.getImp() && !entry.getUrg()) {
             out = entry;
             flag = true;
           }
@@ -253,11 +253,11 @@ class Todoist {
 
   public String toString() {
     String out = "";
-    // for (Task entry : tasks) {
-    //  out = out + entry.getTitle() + ", " + entry.getassignedTo() +  ", "
-    //        + entry.gettimeToComplete() +  ", " + entry.getImportant()
-    //        + entry.getUrgent() + ", " +  entry.getStatus() + "\n";
-    // }
+    for (int i = 0; i < size; i++) {
+      out = out + tasks[i].getTitle() + ", " + tasks[i].getassignedTo() +  ", "
+            + tasks[i].gettimeToComplete() +  ", " + tasks[i].getImportant()
+            + tasks[i].getUrgent() + ", " +  tasks[i].getStatus() + "\n";
+    }
     return out;
   }
 }
@@ -346,7 +346,7 @@ public class TodoistMain {
     boolean urgent = tokens[5].equals("y");
     String status = tokens[6];
     return new Task(
-               title, assignedTo, timeToComplete, important, urgent, status);
+             title, assignedTo, timeToComplete, important, urgent, status);
   }
 
   /**
