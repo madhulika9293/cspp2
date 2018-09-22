@@ -50,7 +50,7 @@ class Task {
    * @param      important1       The important 1
    * @param      urgent1          The urgent 1
    * @param      status1          The status 1
-   * 
+   *
    * @throws exception.
    */
   Task(final String title1, final String assignedTo1,
@@ -307,12 +307,18 @@ class Todoist {
     return time;
   }
 
+  /**
+   * Returns a string representation of the object.
+   *
+   * @return     String representation of the object.
+   */
   public String toString() {
     String out = "";
     for (int i = 0; i < size; i++) {
       out = out + tasks[i].getTitle() + ", " + tasks[i].getassignedTo() +  ", "
             + tasks[i].gettimeToComplete() +  ", " + tasks[i].getImportant()
-            +  ", " + tasks[i].getUrgent() + ", " +  tasks[i].getStatus() + "\n";
+            +  ", " + tasks[i].getUrgent() + ", " +  tasks[i].getStatus()
+            + "\n";
     }
     return out;
   }
@@ -350,8 +356,8 @@ public class TodoistMain {
         System.out.println(Arrays.deepToString(tasks));
         break;
       case "total-time":
-       System.out.println(todo.totalTime4Completion());
-       break;
+        System.out.println(todo.totalTime4Completion());
+        break;
       default:
         break;
       }
