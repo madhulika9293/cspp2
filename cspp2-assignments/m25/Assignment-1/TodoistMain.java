@@ -227,6 +227,7 @@ class Todoist {
             && tasks[i].getImp() && !tasks[i].getUrg()) {
           out = tasks[i];
           flag = true;
+          return out;
         }
       }
     }
