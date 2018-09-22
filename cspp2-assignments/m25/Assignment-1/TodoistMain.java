@@ -4,6 +4,12 @@ import java.util.Arrays;
 /**
   * write your code below this comment
   */
+
+// class titleException extends Exception {
+// 	titleException() {
+
+// 	}
+// }
 /**
  * Class for task.
  */
@@ -45,14 +51,26 @@ class Task {
 	 */
 	Task(final String title1, final String assignedTo1,
 	     final int timeToComplete1, final boolean important1,
-	     final boolean urgent1, final String status1) {
+	     final boolean urgent1, final String status1) throws Exception {
 
-		title = title1;
+		if (title1.length() != 0) {
+			title = title1;
+		} else {
+			throw new Exception("Title not provided");
+		}
 		assignedTo = assignedTo1;
-		timeToComplete = timeToComplete1;
+		if (timeToComplete1 >= 0) {
+			timeToComplete = timeToComplete1;
+		} else {
+			throw new Exception("Invalid timeToComplete " + timeToComplete1);
+		}
 		important = important1;
 		urgent = urgent1;
-		status = status1;
+		if (status1 == "todo" || status1 == "done") {
+			status = status1;
+		} else {
+			throw new Exception("Inavlid status " + status1);
+		}
 	}
 
 	/**
