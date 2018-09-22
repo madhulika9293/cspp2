@@ -260,15 +260,17 @@ class Todoist {
 	 */
 	public String toString() {
 		String out = "";
+		System.out.print("called");
 		for (Task entry : tasks) {
 			out  = out + entry.getTitle() + ", " + entry.getassignedTo()
 			+ ", " + entry.gettimeToComplete() + ", " + entry.getImportant()
-			+ ", " + entry.getUrgent() + ", " + entry.getStatus();
-			// out += "\n";
-			
+			+ ", " + entry.getUrgent() + ", " + entry.getStatus() + "\n";
 		}
 		return out;
 		// return out.substring(0, out.length() - 1);
+	}
+	public int dummy() {
+		return 0;
 	}
 
 }
