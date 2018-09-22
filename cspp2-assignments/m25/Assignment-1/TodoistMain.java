@@ -66,7 +66,7 @@ class Task {
 		}
 		important = important1;
 		urgent = urgent1;
-		if (status1 == "todo" || status1 == "done") {
+		if (status1.equals("todo") || status1.equals("done")) {
 			status = status1;
 		} else {
 			throw new Exception("Inavlid status " + status1);
