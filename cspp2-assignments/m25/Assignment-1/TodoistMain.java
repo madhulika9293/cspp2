@@ -41,6 +41,13 @@ class Task {
 
 	/**
 	 * Constructs the object.
+	 */
+	Task() {
+
+	}
+
+	/**
+	 * Constructs the object.
 	 *
 	 * @param      title1           The title 1
 	 * @param      assignedTo1      The assigned to 1
@@ -100,6 +107,77 @@ class Task {
 		return out;
 	}
 
+	/**
+	 * Gets the title.
+	 *
+	 * @return     The title.
+	 */
+	public String getTitle() {
+		return title;
+	}
+
+	/**
+	 * gets the person assigned to.
+	 *
+	 * @return     assigned to.
+	 */
+	public String getassignedTo() {
+		return assignedTo;
+	}
+
+	/**
+	 * Gets the important.
+	 *
+	 * @return     The important.
+	 */
+	public String getImportant() {
+		if (important) {
+			return "Important";
+		} else {
+			return "Not Important";
+		}
+	}
+
+	/**
+	 * Gets the urgent.
+	 *
+	 * @return     The urgent.
+	 */
+	public String getUrgent() {
+		if (urgent) {
+			return "Urgent";
+		} else {
+			return "Not Urgent";
+		}
+	}
+
+	/**
+	 * Gets the status.
+	 *
+	 * @return     The status.
+	 */
+	public String getStatus() {
+		return status;
+	}
+
+	/**
+	 * Gets the imp.
+	 *
+	 * @return     The imp.
+	 */
+	public boolean getImp() {
+		return important;
+	}
+
+	/**
+	 * Gets the urg.
+	 *
+	 * @return     The urg.
+	 */
+	public boolean getUrg() {
+		return urgent;
+	}
+
 }
 /**
  * Class for todoist.
@@ -136,7 +214,37 @@ class Todoist {
 	}
 
 	public Task getNextTask(final String person) {
-		return null;
+		Task out = new Task();
+		boolean flag = false;
+
+		for (Task entry : tasks) {
+			if (entry.getassignedTo().equals(person)) {
+				if (entry.getStatus().equals("todo")
+				        && entry.getImp() && !entry.getUrg()) {
+					out = entry;
+					flag = true;
+				}
+			}
+		}
+
+		if (!flag) {
+			for (Task entry : tasks) {
+				if (entry.getassignedTo().equals(person)) {
+					if (entry.getStatus().equals("todo")
+					        && entry.getImp() && !entry.getUrg()) {
+						out = entry;
+						flag = true;
+					}
+				}
+			}
+
+		}
+
+		if (!flag) {
+			out = null;
+		}
+
+		return out;
 	}
 	// /**
 	//  * Returns a string representation of the object.
