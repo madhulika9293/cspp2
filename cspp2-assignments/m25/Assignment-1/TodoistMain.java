@@ -51,7 +51,7 @@ class Task {
    * @param      urgent1          The urgent 1
    * @param      status1          The status 1
    *
-   * @throws exception.
+   * @throws     exception.
    */
   Task(final String title1, final String assignedTo1,
        final int timeToComplete1, final boolean important1,
@@ -327,7 +327,7 @@ class Todoist {
 /**
  * Class for todoist main.
  */
-public class TodoistMain {
+final public class TodoistMain {
   /**
    * Constructs the object.
    */
