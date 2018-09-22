@@ -126,6 +126,15 @@ class Task {
 	}
 
 	/**
+	 * returns time.
+	 *
+	 * @return     time.
+	 */
+	public int gettimeToComplete() {
+		return timeToComplete;
+	}
+
+	/**
 	 * Gets the important.
 	 *
 	 * @return     The important.
@@ -252,10 +261,14 @@ class Todoist {
 	public String toString() {
 		String out = "";
 		for (Task entry : tasks) {
-			out += entry.toString();
-			out += "\n";
+			out  = out + entry.getTitle() + ", " + entry.getassignedTo()
+			+ ", " + entry.gettimeToComplete() + ", " + entry.getImportant()
+			+ ", " + entry.getUrgent() + ", " + entry.getStatus();
+			// out += "\n";
+			
 		}
-		return out.substring(0, out.length() - 1);
+		return out;
+		// return out.substring(0, out.length() - 1);
 	}
 
 }
