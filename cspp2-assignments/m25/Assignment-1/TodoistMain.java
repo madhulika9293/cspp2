@@ -221,22 +221,22 @@ class Todoist {
     Task out = new Task();
     boolean flag = false;
 
-    for (Task entry : tasks) {
-      if (entry.getassignedTo().equals(person)) {
-        if (entry.getStatus().equals("todo")
-            && entry.getImp() && !entry.getUrg()) {
-          out = entry;
+    for (int i = 0; i < size; i++) {
+      if (tasks[i].getassignedTo().equals(person)) {
+        if (tasks[i].getStatus().equals("todo")
+            && tasks[i].getImp() && !tasks[i].getUrg()) {
+          out = tasks[i];
           flag = true;
         }
       }
     }
 
     if (!flag) {
-      for (Task entry : tasks) {
-        if (entry.getassignedTo().equals(person)) {
-          if (entry.getStatus().equals("todo")
-              && entry.getImp() && !entry.getUrg()) {
-            out = entry;
+      for (int i = 0; i < size; i++) {
+        if (tasks[i].getassignedTo().equals(person)) {
+          if (tasks[i].getStatus().equals("todo")
+              && tasks[i].getImp() && !tasks[i].getUrg()) {
+            out = tasks[i];
             flag = true;
           }
         }
