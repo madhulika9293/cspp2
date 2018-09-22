@@ -69,7 +69,7 @@ class Task {
 		if (status1.equals("todo") || status1.equals("done")) {
 			status = status1;
 		} else {
-			throw new Exception("Inavlid status " + status1);
+			throw new Exception("Invalid status " + status1);
 		}
 	}
 
