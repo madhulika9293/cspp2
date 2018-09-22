@@ -132,6 +132,7 @@ class Todoist {
 	public void addTask(final Task tsk) {
 		tasks[size] = tsk;
 		size += 1;
+		System.out.println(tsk);
 	}
 
 	/**
