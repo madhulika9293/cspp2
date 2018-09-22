@@ -254,11 +254,11 @@ class Todoist {
 	public String toString() {
 		String out = "";
 		for (Task entry : tasks) {
-			out = entry.getTitle() + ", " + entry.getassignedTo() +  ", "
+			out = out + entry.getTitle() + ", " + entry.getassignedTo() +  ", "
 			      + entry.gettimeToComplete() +  ", " + entry.getImportant()
 			      + entry.getUrgent() + ", " +  entry.getStatus() + "\n";
 		}
-		return out.substring(0, out.length() - 1);
+		return out;
 	}
 }
 
