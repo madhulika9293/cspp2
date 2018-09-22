@@ -268,25 +268,23 @@ class Todoist {
       }
     }
 
-    // if (!flag) {
-    //   for (int i = 0; i < size; i++) {
-    //     if (tasks[i].getassignedTo().equals(person)) {
-    //       if (tasks[i].getStatus().equals("todo")
-    //           && tasks[i].getImp() && !tasks[i].getUrg()) {
-    //         out = tasks[i];
-    //         flag = true;
-    //       }
-    //     }
-    //   }
-
-    // }
-
     if (!flag) {
       out = null;
     }
 
     return out;
   }
+
+  public int totalTime4Completion() {
+    int time = 0;
+    for (int i = 0; i < size; i++) {
+      if (tasks[i].getStatus().equals("todo")) {
+        time += tasks[i].gettimeToComplete();
+      }
+    }
+    return time;
+  }
+
   public String toString() {
     String out = "";
     for (int i = 0; i < size; i++) {
@@ -329,9 +327,9 @@ public class TodoistMain {
         Task[] tasks = todo.getNextTask(tokens[1], n);
         System.out.println(Arrays.deepToString(tasks));
         break;
-      // case "total-time":
-      //  System.out.println(todo.totalTime4Completion());
-      //  break;
+      case "total-time":
+       System.out.println(todo.totalTime4Completion());
+       break;
       default:
         break;
       }
